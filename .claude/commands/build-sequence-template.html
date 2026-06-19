@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAIF Build Sequence - Dependency Graph</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0a0e17;
+  color: #e0e4ec;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10,14,23,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 14px 24px;
+}
+
+.top-bar-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.brand .cyan { color: #38bdf8; }
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.stats strong { color: #e2e8f0; }
+.stats .g { color: #34d399; }
+.stats .a { color: #fbbf24; }
+.stats .b { color: #38bdf8; }
+
+.pbar { width: 120px; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; }
+.pbar-fill { height: 100%; background: linear-gradient(90deg, #38bdf8, #34d399); border-radius: 2px; transition: width 0.3s; }
+
+.filters {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.fbtn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 4px 9px;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.fbtn:hover { background: rgba(255,255,255,0.05); color: #94a3b8; }
+.fbtn.on { border-color: #38bdf8; color: #38bdf8; background: rgba(56,189,248,0.06); }
+.fbtn.cp.on { border-color: #f97316; color: #f97316; background: rgba(249,115,22,0.06); }
+.fbtn.bn.on { border-color: #34d399; color: #34d399; background: rgba(52,211,153,0.06); }
+
+.graph-wrap { overflow: auto; position: relative; }
+
+.graph-canvas { position: relative; margin: 0 auto; }
+
+.graph-canvas svg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tier-label {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+/* ── Nodes ── */
+.nd {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 2;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.nd:hover { background: rgba(255,255,255,0.07); transform: translateY(-1px); z-index: 10; }
+
+.nd .nid {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.3px;
+}
+
+.nd .ntitle {
+  font-weight: 500;
+  color: #94a3b8;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+.nd .nst { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.nst.s-ns { background: #334155; }
+.nst.s-ip { background: #fbbf24; box-shadow: 0 0 6px rgba(251,191,36,0.5); }
+.nst.s-co { background: #34d399; box-shadow: 0 0 6px rgba(52,211,153,0.5); }
+
+.nd .crit-dot {
+  position: absolute; top: -2px; right: -2px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #f97316; box-shadow: 0 0 4px rgba(249,115,22,0.6);
+}
+
+.nd .buildable-ring {
+  position: absolute; inset: -2px; border-radius: 10px;
+  border: 1px dashed rgba(52,211,153,0.4); pointer-events: none;
+}
+
+.nd.dimmed { opacity: 0.08; pointer-events: none; }
+.nd.sel { border-color: #38bdf8; background: rgba(56,189,248,0.1); box-shadow: 0 0 16px rgba(56,189,248,0.12); }
+.nd.dep-up { border-color: rgba(52,211,153,0.5); background: rgba(52,211,153,0.06); }
+.nd.dep-dn { border-color: rgba(167,139,250,0.4); background: rgba(167,139,250,0.05); }
+
+/* Domain ID colours */
+.d-core .nid { background: rgba(251,191,36,0.12); color: #fbbf24; }
+.d-std .nid { background: rgba(209,213,219,0.08); color: #d1d5db; }
+.d-cfg .nid { background: rgba(167,139,250,0.1); color: #a78bfa; }
+.d-thm .nid { background: rgba(56,189,248,0.08); color: #38bdf8; }
+.d-evt .nid { background: rgba(244,114,182,0.1); color: #f472b6; }
+.d-pkg .nid { background: rgba(94,234,212,0.1); color: #5eead4; }
+.d-tst .nid { background: rgba(196,181,253,0.1); color: #c4b5fd; }
+.d-i18 .nid { background: rgba(147,197,253,0.1); color: #93c5fd; }
+.d-ci .nid { background: rgba(134,239,172,0.1); color: #86efac; }
+.d-api .nid { background: rgba(52,211,153,0.1); color: #34d399; }
+.d-rt .nid { background: rgba(251,146,60,0.1); color: #fb923c; }
+.d-sec .nid { background: rgba(248,113,113,0.1); color: #f87171; }
+.d-err .nid { background: rgba(253,186,116,0.1); color: #fdba74; }
+.d-obs .nid { background: rgba(129,140,248,0.1); color: #818cf8; }
+.d-doc .nid { background: rgba(203,213,225,0.08); color: #cbd5e1; }
+.d-prf .nid { background: rgba(252,211,77,0.1); color: #fcd34d; }
+
+/* ── Tooltip ── */
+.tip {
+  position: fixed; z-index: 200;
+  background: #1e293b; border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px; padding: 10px 14px;
+  font-size: 11px; color: #cbd5e1;
+  pointer-events: none; opacity: 0;
+  transition: opacity 0.15s; max-width: 320px;
+}
+
+.tip.show { opacity: 1; }
+.tip .t-id { font-family:'JetBrains Mono',monospace; font-weight:700; color:#38bdf8; }
+.tip .t-title { font-weight:600; color:#f1f5f9; margin-bottom:4px; }
+.tip .t-domain { font-family:'JetBrains Mono',monospace; font-size:9px; color:#64748b; margin-bottom:6px; }
+.tip .t-row { display:flex; gap:12px; margin-top:3px; }
+.tip .t-label { font-family:'JetBrains Mono',monospace; font-size:9px; color:#475569; letter-spacing:0.5px; }
+.tip .t-val { color:#94a3b8; }
+.tip .t-buildable { color:#34d399; font-weight:600; margin-top:4px; }
+.tip .t-crit { color:#f97316; font-weight:600; }
+
+/* Legend */
+.legend {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; padding: 10px; flex-wrap: wrap;
+}
+.leg { display:flex; align-items:center; gap:4px; font-size:10px; color:#475569; }
+.leg-dot { width:7px; height:7px; border-radius:50%; }
+.leg-dot.ns { background:#334155; }
+.leg-dot.ip { background:#fbbf24; }
+.leg-dot.co { background:#34d399; }
+.leg-line { width:18px; height:0; border-top:2px solid; }
+.leg-line.dep { border-color: rgba(56,189,248,0.2); }
+.leg-line.crit { border-color: #f97316; }
+.leg-line.up { border-color: #34d399; }
+.leg-line.dn { border-color: #a78bfa; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="brand"><span class="cyan">WAIF</span> Build Sequence</div>
+    <div class="stats" id="stats"></div>
+    <div class="filters" id="filters"></div>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="leg"><div class="leg-dot ns"></div> Not started</div>
+  <div class="leg"><div class="leg-dot ip"></div> In progress</div>
+  <div class="leg"><div class="leg-dot co"></div> Complete</div>
+  <div class="leg"><div class="leg-line dep"></div> Build path</div>
+  <div class="leg"><div class="leg-line crit"></div> Critical path</div>
+  <div class="leg"><div class="leg-line up" style="border-color:#34d399"></div> Upstream dep (click)</div>
+  <div class="leg"><div class="leg-line dn" style="border-color:#a78bfa"></div> Downstream (click)</div>
+</div>
+
+<div class="graph-wrap" id="graphWrap">
+  <div class="graph-canvas" id="canvas">
+    <svg id="edgeSvg"></svg>
+  </div>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script>
+// ════════════════════════════════════════════════════════════════
+// DATA SECTIONS - Managed by /rcf-create-build-graph and
+// /rcf-update-build-graph Claude commands.
+// Do not edit the template HTML/CSS/JS outside these sections.
+// ════════════════════════════════════════════════════════════════
+
+const FBS = [
+  /*__FBS_DATA__*/
+];
+
+const CRIT = new Set([/*__CRIT_DATA__*/]);
+
+const TIERS = [
+  /*__TIERS_DATA__*/
+];
+
+// ════════════════════════════════════════════════════════════════
+// DOMAIN CLASS MAPPING - Add new domains here if they appear
+// ════════════════════════════════════════════════════════════════
+
+const DC = {
+  "Core Framework":"d-core","Component Standards":"d-std","Configuration System":"d-cfg",
+  "Theming System":"d-thm","Event System":"d-evt","Package & Distribution":"d-pkg",
+  "Testing Framework":"d-tst","Internationalization":"d-i18","CI/CD Pipeline":"d-ci",
+  "API Controllers":"d-api","Real-time Communication":"d-rt","Security & CORS":"d-sec",
+  "Error Handling":"d-err","Observability":"d-obs","Documentation":"d-doc","Performance":"d-prf"
+};
+
+// ════════════════════════════════════════════════════════════════
+// ENGINE - Do not modify below this line
+// ════════════════════════════════════════════════════════════════
+
+// Index
+const M = {}; FBS.forEach(f => M[f.id] = f);
+const DN = {}; FBS.forEach(f => DN[f.id] = []);
+FBS.forEach(f => f.deps.forEach(d => { if(DN[d]) DN[d].push(f.id); }));
+const tierOf = {}; TIERS.forEach((g,i) => g.forEach(id => tierOf[id] = i));
+const domains = [...new Set(FBS.map(f=>f.d))].sort();
+
+// Primary dep: nearest-tier dependency only (for clean tree edges)
+const primaryDep = {};
+FBS.forEach(f => {
+  if (f.deps.length === 0) { primaryDep[f.id] = null; return; }
+  const sorted = [...f.deps].filter(d => tierOf[d] !== undefined).sort((a,b) => tierOf[b] - tierOf[a]);
+  primaryDep[f.id] = sorted[0] || null;
+});
+
+// Layout
+const NW = 190, NH = 32, PAD_X = 14, PAD_Y = 90, TOP = 10, LEFT = 60;
+const maxCols = TIERS.reduce((mx,g) => Math.max(mx, g.length), 0);
+
+const pos = {};
+TIERS.forEach((group, tier) => {
+  const y = TOP + tier * PAD_Y;
+  const totalW = group.length * NW + (group.length - 1) * PAD_X;
+  const startX = LEFT + Math.max(0, (maxCols * (NW + PAD_X) - PAD_X - totalW) / 2);
+  group.forEach((id, i) => {
+    pos[id] = { x: startX + i * (NW + PAD_X), y, w: NW, h: NH };
+  });
+});
+
+const canvasW = LEFT * 2 + maxCols * (NW + PAD_X);
+const canvasH = TOP + TIERS.length * PAD_Y + NH + 30;
+
+// State
+let selId = null, filterDom = null, showCrit = false, showBuildable = false;
+
+function num(id) { return id.replace('FBS-0','').replace('FBS-',''); }
+function isBuildable(f) { return f.s === 'not-started' && f.deps.every(d => M[d]?.s === 'complete'); }
+function stCls(s) { return s === 'complete' ? 's-co' : s === 'in-progress' ? 's-ip' : 's-ns'; }
+
+function isVisible(id) {
+  const f = M[id]; if (!f) return false;
+  if (filterDom && f.d !== filterDom) return false;
+  if (showCrit && !CRIT.has(id)) return false;
+  if (showBuildable && !isBuildable(f)) return false;
+  return true;
+}
+
+// Stats
+function renderStats() {
+  const total = FBS.length, co = FBS.filter(f=>f.s==='complete').length, ip = FBS.filter(f=>f.s==='in-progress').length;
+  const bn = FBS.filter(isBuildable).length, pct = total ? Math.round(co/total*100) : 0;
+  document.getElementById('stats').innerHTML =
+    `<strong>${total}</strong> FBS &nbsp;<span class="g">${co}</span> done &nbsp;<span class="a">${ip}</span> wip &nbsp;<span class="b">${bn}</span> buildable` +
+    `&nbsp;<div class="pbar"><div class="pbar-fill" style="width:${pct}%"></div></div> <strong>${pct}%</strong>`;
+}
+
+// Filters
+function renderFilters() {
+  const el = document.getElementById('filters');
+  let h = `<button class="fbtn cp ${showCrit?'on':''}" onclick="togCrit()">CRIT PATH</button>`;
+  h += `<button class="fbtn bn ${showBuildable?'on':''}" onclick="togBuild()">BUILDABLE</button>`;
+  h += `<button class="fbtn ${!filterDom?'on':''}" onclick="fDom(null)">ALL</button>`;
+  domains.forEach(d => { h += `<button class="fbtn ${filterDom===d?'on':''}" onclick="fDom('${d}')">${d}</button>`; });
+  el.innerHTML = h;
+}
+
+// SVG
+const NS = 'http://www.w3.org/2000/svg';
+
+function drawEdges() {
+  const svg = document.getElementById('edgeSvg');
+  svg.innerHTML = '';
+  svg.setAttribute('viewBox', `0 0 ${canvasW} ${canvasH}`);
+  svg.setAttribute('width', canvasW);
+  svg.setAttribute('height', canvasH);
+
+  const defs = document.createElementNS(NS, 'defs');
+  [['ah','rgba(56,189,248,0.3)'],['ahc','#f97316'],['ahg','rgba(52,211,153,0.6)'],['ahp','rgba(167,139,250,0.5)']].forEach(([mid,col]) => {
+    const mk = document.createElementNS(NS, 'marker');
+    mk.setAttribute('id', mid);
+    mk.setAttribute('markerWidth', '6'); mk.setAttribute('markerHeight', '5');
+    mk.setAttribute('refX', '6'); mk.setAttribute('refY', '2.5');
+    mk.setAttribute('orient', 'auto');
+    const p = document.createElementNS(NS, 'polygon');
+    p.setAttribute('points', '0 0, 6 2.5, 0 5');
+    p.setAttribute('fill', col);
+    mk.appendChild(p); defs.appendChild(mk);
+  });
+  svg.appendChild(defs);
+
+  if (selId) {
+    const f = M[selId];
+    f.deps.forEach(depId => drawOne(svg, depId, selId, 'rgba(52,211,153,0.45)', '1.5', 'url(#ahg)', true));
+    DN[selId]?.forEach(dnId => drawOne(svg, selId, dnId, 'rgba(167,139,250,0.35)', '1.5', 'url(#ahp)', true));
+  } else if (showCrit) {
+    const critArr = [...CRIT];
+    critArr.forEach(id => {
+      const f = M[id];
+      f.deps.forEach(depId => {
+        if (CRIT.has(depId)) drawOne(svg, depId, id, '#f97316', '2', 'url(#ahc)', true);
+      });
+    });
+  } else {
+    FBS.forEach(f => {
+      const dep = primaryDep[f.id];
+      if (!dep) return;
+      if (!isVisible(f.id) || !isVisible(dep)) return;
+      drawOne(svg, dep, f.id, 'rgba(56,189,248,0.15)', '1', 'url(#ah)', false);
+    });
+  }
+}
+
+function drawOne(svg, fromId, toId, stroke, sw, marker, glow) {
+  const from = pos[fromId], to = pos[toId];
+  if (!from || !to) return;
+
+  const x1 = from.x + from.w / 2, y1 = from.y + from.h;
+  const x2 = to.x + to.w / 2, y2 = to.y;
+  const midY = y1 + (y2 - y1) * 0.5;
+  const d = `M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2}`;
+
+  if (glow) {
+    const gl = document.createElementNS(NS, 'path');
+    gl.setAttribute('d', d); gl.setAttribute('fill', 'none');
+    gl.setAttribute('stroke', stroke); gl.setAttribute('stroke-width', '4');
+    gl.setAttribute('opacity', '0.12'); gl.setAttribute('filter', 'blur(4px)');
+    svg.appendChild(gl);
+  }
+
+  const path = document.createElementNS(NS, 'path');
+  path.setAttribute('d', d);
+  path.setAttribute('fill', 'none');
+  path.setAttribute('stroke', stroke);
+  path.setAttribute('stroke-width', sw);
+  path.setAttribute('marker-end', marker);
+  svg.appendChild(path);
+}
+
+// Nodes
+function renderNodes() {
+  document.querySelectorAll('.nd, .tier-label').forEach(el => el.remove());
+  const canvas = document.getElementById('canvas');
+  canvas.style.width = canvasW + 'px';
+  canvas.style.height = canvasH + 'px';
+
+  TIERS.forEach((_, i) => {
+    const lbl = document.createElement('div');
+    lbl.className = 'tier-label';
+    lbl.style.left = '8px';
+    lbl.style.top = (TOP + i * PAD_Y + 8) + 'px';
+    lbl.textContent = 'T' + i;
+    canvas.appendChild(lbl);
+  });
+
+  FBS.forEach(f => {
+    const p = pos[f.id]; if (!p) return;
+    const el = document.createElement('div');
+
+    let cls = `nd ${DC[f.d] || ''}`;
+    if (!isVisible(f.id)) { cls += ' dimmed'; }
+    else if (selId) {
+      if (f.id === selId) cls += ' sel';
+      else if (M[selId]?.deps.includes(f.id)) cls += ' dep-up';
+      else if (DN[selId]?.includes(f.id)) cls += ' dep-dn';
+    }
+
+    el.className = cls;
+    el.style.left = p.x + 'px';
+    el.style.top = p.y + 'px';
+    el.style.width = p.w + 'px';
+    el.style.height = p.h + 'px';
+    el.onclick = () => sel(f.id);
+    el.onmouseenter = (e) => showTip(e, f);
+    el.onmouseleave = hideTip;
+
+    el.innerHTML =
+      `<span class="nid">${num(f.id)}</span>` +
+      `<span class="ntitle">${f.t}</span>` +
+      `<span class="nst ${stCls(f.s)}"></span>` +
+      (CRIT.has(f.id) ? '<span class="crit-dot"></span>' : '') +
+      (isBuildable(f) ? '<span class="buildable-ring"></span>' : '');
+
+    canvas.appendChild(el);
+  });
+}
+
+// Tooltip
+function showTip(e, f) {
+  const tip = document.getElementById('tip');
+  const bn = isBuildable(f);
+  tip.innerHTML =
+    `<div class="t-title"><span class="t-id">${f.id}</span> ${f.t}</div>` +
+    `<div class="t-domain">${f.d}</div>` +
+    `<div class="t-row"><span class="t-label">STATUS</span> <span class="t-val">${f.s}</span></div>` +
+    `<div class="t-row"><span class="t-label">DEPS</span> <span class="t-val">${f.deps.length ? f.deps.join(', ') : 'None'}</span></div>` +
+    `<div class="t-row"><span class="t-label">NEEDED BY</span> <span class="t-val">${DN[f.id]?.length ? DN[f.id].join(', ') : 'None'}</span></div>` +
+    (bn ? '<div class="t-buildable">READY TO BUILD</div>' : '') +
+    (CRIT.has(f.id) ? '<div class="t-crit">CRITICAL PATH</div>' : '');
+  tip.style.left = Math.min(e.clientX + 12, window.innerWidth - 340) + 'px';
+  tip.style.top = Math.max(e.clientY - 60, 8) + 'px';
+  tip.classList.add('show');
+}
+
+function hideTip() { document.getElementById('tip').classList.remove('show'); }
+
+function sel(id) { selId = selId === id ? null : id; render(); }
+function fDom(d) { filterDom = d; selId = null; renderFilters(); render(); }
+function togCrit() { showCrit = !showCrit; showBuildable = false; selId = null; renderFilters(); render(); }
+function togBuild() { showBuildable = !showBuildable; showCrit = false; selId = null; renderFilters(); render(); }
+
+function render() { renderNodes(); drawEdges(); }
+
+renderStats();
+renderFilters();
+render();
+</script>
+</body>
+</html>
