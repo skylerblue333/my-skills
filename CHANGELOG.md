@@ -5,6 +5,53 @@ All notable changes to the Stock Buddy Skills Suite will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2024-06-21
+
+### Added
+- Complete RCF Build Sequence implementation (21/21 FBS entries)
+- Multi-agent system with specialized agents:
+  - MomentumAgent for momentum trading analysis
+  - InvestmentAgent for value investing evaluation
+  - BusinessAgent for business health assessment
+  - AgentCoordinator for multi-agent synthesis
+- Enhanced data adapter layer:
+  - FileProvider with JSON fixtures support
+  - DSEProvider stub for future live data
+  - MockProvider for testing
+  - In-memory caching with TTL support
+  - Token bucket rate limiting
+- Interactive UI components:
+  - HTML checklist generator for momentum screening
+  - Investment grade visualization
+  - Interactive explanations for all criteria
+- Price prediction engine:
+  - Support and resistance level calculation
+  - Buy zone identification
+  - Sell target recommendations
+  - Stop loss calculations
+  - Technical and fundamental price targets
+- DSE market localization:
+  - Circuit breaker adaptations
+  - Sector-specific P/E benchmarks
+  - Bengali translations for key terms
+  - DSE-specific market metrics
+- Production-ready infrastructure:
+  - Docker containerization with multi-stage build
+  - GitHub Actions CI/CD pipeline
+  - NPM package distribution
+  - Comprehensive test coverage
+  - Security scanning and dependency management
+
+### Changed
+- Enhanced MCP server with HTTP transport option
+- Improved skill execution with async support
+- Updated documentation with deployment guide
+
+### Fixed
+- Rate limiting for data provider access
+- Cache invalidation for stale data
+- Error handling in agent coordination
+
 ## [1.0.0] - 2024-06-20
 
 ### Added
