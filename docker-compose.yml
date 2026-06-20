@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  stock-buddy-mcp:
+    build:
+      context: .
+      dockerfile: mcp-server/Dockerfile
+    image: stock-buddy-mcp:latest
+    container_name: stock-buddy-mcp
+    ports:
+      - "8080:8080"
+    environment:
+      - STOCK_BUDDY_HTTP=1
+      - STOCK_BUDDY_PORT=8080
+    volumes:
+      # Mount skills for development (optional)
+      # - ./skills:/app/skills:ro
+      # Mount data fixtures
+      - ./skills/_fixtures:/app/skills/_fixtures:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    networks:
+      - stock-buddy-net
+
+networks:
+  stock-buddy-net:
+    driver: bridge

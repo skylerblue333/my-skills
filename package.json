@@ -1,0 +1,29 @@
+{
+  "name": "@stock-buddy/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Stock Buddy DSE analysis skills",
+  "bin": {
+    "stock-buddy-mcp": "./bin/stock-buddy-mcp.js"
+  },
+  "scripts": {
+    "start": "node bin/stock-buddy-mcp.js",
+    "test": "echo \"Run python tests: python -m pytest tests/\""
+  },
+  "keywords": [
+    "mcp",
+    "stock-analysis",
+    "dse",
+    "trading",
+    "investment"
+  ],
+  "author": "Stock Buddy Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuntal-r-d/my-skills.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "preferGlobal": true
+}

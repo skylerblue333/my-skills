@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "stock-buddy": {
+      "command": "python3",
+      "args": ["-m", "stock_buddy_mcp.server"],
+      "cwd": "/path/to/stock-buddy/mcp-server",
+      "env": {
+        "STOCK_BUDDY_SKILLS_DIR": "../skills"
+      }
+    }
+  }
+}
