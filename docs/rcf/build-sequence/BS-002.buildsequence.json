@@ -1,0 +1,250 @@
+{
+  "bsId": "BS-002",
+  "prdId": "PRD-002",
+  "version": "1.0.0",
+  "description": "Build sequence for implementing client-provided data enhancement to Stock Buddy MCP server",
+  "sequence": [
+    {
+      "id": "FBS-021",
+      "title": "Create Client Data Provider",
+      "summary": "Implement ClientDataProvider class that extracts data from MCP tool arguments",
+      "storyScope": [
+        {
+          "usId": "US-021",
+          "acIds": ["AC-021-01", "AC-021-02", "AC-021-03"]
+        },
+        {
+          "usId": "US-022",
+          "acIds": ["AC-022-01"]
+        }
+      ],
+      "dependencies": [],
+      "testableOutcomes": [
+        "ClientDataProvider successfully extracts OHLCV data from tool arguments",
+        "ClientDataProvider successfully extracts fundamentals from tool arguments",
+        "Provider returns data in correct format for skills"
+      ],
+      "domain": "Data Integration",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-022",
+      "title": "Implement Data Validation Layer",
+      "summary": "Create comprehensive validation for all client-provided data types",
+      "storyScope": [
+        {
+          "usId": "US-022",
+          "acIds": ["AC-022-02", "AC-022-03"]
+        },
+        {
+          "usId": "US-024",
+          "acIds": ["AC-024-01", "AC-024-02", "AC-024-03", "AC-024-04"]
+        }
+      ],
+      "dependencies": ["FBS-021"],
+      "testableOutcomes": [
+        "Invalid data types trigger specific validation errors",
+        "Missing required fields are identified",
+        "Date format errors are caught with helpful messages",
+        "Range violations are detected and reported"
+      ],
+      "domain": "Data Quality",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-023",
+      "title": "Enhance Tool Schemas",
+      "summary": "Update MCP tool schemas with detailed data requirements and examples",
+      "storyScope": [
+        {
+          "usId": "US-023",
+          "acIds": ["AC-023-01", "AC-023-02", "AC-023-03"]
+        },
+        {
+          "usId": "US-030",
+          "acIds": ["AC-030-01", "AC-030-02", "AC-030-03", "AC-030-04"]
+        }
+      ],
+      "dependencies": [],
+      "testableOutcomes": [
+        "Tool schemas include complete field definitions",
+        "Required fields are clearly marked",
+        "Example payloads work with actual tools",
+        "Documentation is auto-generated from schemas"
+      ],
+      "domain": "API Design",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-024",
+      "title": "Update Provider Factory",
+      "summary": "Modify provider factory to detect and use client data when available",
+      "storyScope": [
+        {
+          "usId": "US-025",
+          "acIds": ["AC-025-01", "AC-025-02", "AC-025-03"]
+        }
+      ],
+      "dependencies": ["FBS-021"],
+      "testableOutcomes": [
+        "Factory correctly selects ClientDataProvider when data provided",
+        "Factory falls back to configured provider when no client data",
+        "Existing configurations continue working"
+      ],
+      "domain": "Architecture",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-025",
+      "title": "Implement Security Controls",
+      "summary": "Add security measures for client-provided data",
+      "storyScope": [
+        {
+          "usId": "US-031",
+          "acIds": ["AC-031-01", "AC-031-02", "AC-031-03", "AC-031-04"]
+        }
+      ],
+      "dependencies": ["FBS-022"],
+      "testableOutcomes": [
+        "Injection attempts are blocked",
+        "Large payloads are rejected",
+        "Deep nesting is limited",
+        "Numeric overflows are prevented"
+      ],
+      "domain": "Security",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-026",
+      "title": "Optimize Performance",
+      "summary": "Ensure system handles large datasets efficiently",
+      "storyScope": [
+        {
+          "usId": "US-028",
+          "acIds": ["AC-028-01", "AC-028-02", "AC-028-03"]
+        }
+      ],
+      "dependencies": ["FBS-021", "FBS-022"],
+      "testableOutcomes": [
+        "5 years of daily data processes without timeout",
+        "Memory usage stays under 512MB",
+        "Response time under 5 seconds for full analysis"
+      ],
+      "domain": "Performance",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-027",
+      "title": "Create Python Client Examples",
+      "summary": "Develop Python examples showing data fetching and tool usage",
+      "storyScope": [
+        {
+          "usId": "US-026",
+          "acIds": ["AC-026-01", "AC-026-02", "AC-026-03"]
+        }
+      ],
+      "dependencies": ["FBS-021", "FBS-023"],
+      "testableOutcomes": [
+        "Python example fetches data from Yahoo Finance",
+        "Example demonstrates proper data formatting",
+        "Error handling patterns are clear"
+      ],
+      "domain": "Documentation",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-028",
+      "title": "Create JavaScript Client Examples",
+      "summary": "Develop JavaScript/TypeScript examples for web integration",
+      "storyScope": [
+        {
+          "usId": "US-027",
+          "acIds": ["AC-027-01", "AC-027-02", "AC-027-03"]
+        }
+      ],
+      "dependencies": ["FBS-021", "FBS-023"],
+      "testableOutcomes": [
+        "JavaScript example uses fetch API correctly",
+        "TypeScript types are accurate and complete",
+        "CORS handling is demonstrated"
+      ],
+      "domain": "Documentation",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-029",
+      "title": "Enhance Error Handling",
+      "summary": "Implement detailed error messages with remediation guidance",
+      "storyScope": [
+        {
+          "usId": "US-029",
+          "acIds": ["AC-029-01", "AC-029-02", "AC-029-03", "AC-029-04"]
+        }
+      ],
+      "dependencies": ["FBS-022"],
+      "testableOutcomes": [
+        "Error messages include field paths",
+        "Expected vs actual types shown",
+        "Suggested fixes provided",
+        "Multiple errors reported together"
+      ],
+      "domain": "User Experience",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-030",
+      "title": "Create Migration Guide",
+      "summary": "Document migration process from server to client data",
+      "storyScope": [
+        {
+          "usId": "US-032",
+          "acIds": ["AC-032-01", "AC-032-02", "AC-032-03", "AC-032-04"]
+        }
+      ],
+      "dependencies": ["FBS-021", "FBS-024", "FBS-027", "FBS-028"],
+      "testableOutcomes": [
+        "Step-by-step instructions are clear",
+        "Before/after examples work correctly",
+        "Common issues are addressed",
+        "Rollback procedure functions properly"
+      ],
+      "domain": "Documentation",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-031",
+      "title": "Integration Testing",
+      "summary": "Comprehensive testing of client data flow end-to-end",
+      "storyScope": [
+        {
+          "usId": "US-021",
+          "acIds": ["AC-021-03"]
+        },
+        {
+          "usId": "US-025",
+          "acIds": ["AC-025-01", "AC-025-02", "AC-025-03"]
+        }
+      ],
+      "dependencies": ["FBS-021", "FBS-022", "FBS-023", "FBS-024", "FBS-025", "FBS-026"],
+      "testableOutcomes": [
+        "All tools work with client-provided data",
+        "Backward compatibility maintained",
+        "Performance meets requirements",
+        "Security controls effective"
+      ],
+      "domain": "Testing",
+      "status": "not-started",
+      "riskLevel": "medium"
+    }
+  ]
+}

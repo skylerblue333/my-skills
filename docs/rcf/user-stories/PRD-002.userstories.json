@@ -1,0 +1,306 @@
+{
+  "prdId": "PRD-002",
+  "stories": [
+    {
+      "id": "US-021",
+      "reqId": "REQ-021",
+      "title": "Client provides OHLCV data for technical analysis",
+      "description": "As an MCP client developer, I want to provide my own OHLCV data when calling technical analysis tools, so that I can use my broker's real-time data feed",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-021-01",
+          "description": "Client can include OHLCV array in tool call arguments",
+          "testable": true
+        },
+        {
+          "id": "AC-021-02",
+          "description": "Server processes client-provided data without fetching from external sources",
+          "testable": true
+        },
+        {
+          "id": "AC-021-03",
+          "description": "Analysis results are identical whether data comes from client or server provider",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-022",
+      "reqId": "REQ-021",
+      "title": "Client provides fundamental data for value analysis",
+      "description": "As a quantitative analyst, I want to provide custom fundamental metrics when calling value investment tools, so that I can include proprietary calculations",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-022-01",
+          "description": "Client can include fundamentals object with P/E, EPS, ROE, etc. in tool arguments",
+          "testable": true
+        },
+        {
+          "id": "AC-022-02",
+          "description": "Server validates fundamental data fields and types",
+          "testable": true
+        },
+        {
+          "id": "AC-022-03",
+          "description": "Missing optional fields are handled gracefully with defaults",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-023",
+      "reqId": "REQ-022",
+      "title": "View detailed tool schema requirements",
+      "description": "As an MCP client developer, I want to see exactly what data fields each tool requires, so that I can prepare the correct data structure",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-023-01",
+          "description": "Tool schemas include complete field definitions with types",
+          "testable": true
+        },
+        {
+          "id": "AC-023-02",
+          "description": "Required vs optional fields are clearly marked",
+          "testable": true
+        },
+        {
+          "id": "AC-023-03",
+          "description": "Example payloads are provided for each tool",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-024",
+      "reqId": "REQ-023",
+      "title": "Receive validation errors for malformed data",
+      "description": "As an MCP client developer, I want clear error messages when my data is invalid, so that I can quickly fix issues",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-024-01",
+          "description": "Invalid data types trigger specific error messages",
+          "testable": true
+        },
+        {
+          "id": "AC-024-02",
+          "description": "Missing required fields are identified in error response",
+          "testable": true
+        },
+        {
+          "id": "AC-024-03",
+          "description": "Date format errors include expected format in message",
+          "testable": true
+        },
+        {
+          "id": "AC-024-04",
+          "description": "Data range violations (e.g., negative prices) are caught and reported",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-025",
+      "reqId": "REQ-024",
+      "title": "Continue using file-based provider",
+      "description": "As an existing user, I want my current file-based data configuration to keep working, so that I don't need to change my setup",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-025-01",
+          "description": "Existing file provider configuration remains functional",
+          "testable": true
+        },
+        {
+          "id": "AC-025-02",
+          "description": "Server automatically selects appropriate provider based on input",
+          "testable": true
+        },
+        {
+          "id": "AC-025-03",
+          "description": "No breaking changes to existing tool interfaces",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-026",
+      "reqId": "REQ-025",
+      "title": "Use Python example to integrate client data",
+      "description": "As a Python developer, I want example code showing how to fetch data and call Stock Buddy tools, so that I can quickly integrate",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-026-01",
+          "description": "Python example demonstrates fetching data from Yahoo Finance",
+          "testable": true
+        },
+        {
+          "id": "AC-026-02",
+          "description": "Example shows proper data formatting for tool calls",
+          "testable": true
+        },
+        {
+          "id": "AC-026-03",
+          "description": "Error handling patterns are demonstrated",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-027",
+      "reqId": "REQ-025",
+      "title": "Use JavaScript example for web integration",
+      "description": "As a web developer, I want JavaScript/TypeScript examples for browser-based integration, so that I can build web trading platforms",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-027-01",
+          "description": "JavaScript example shows fetch API usage for data retrieval",
+          "testable": true
+        },
+        {
+          "id": "AC-027-02",
+          "description": "TypeScript types are provided for data structures",
+          "testable": true
+        },
+        {
+          "id": "AC-027-03",
+          "description": "Example handles CORS and authentication patterns",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-028",
+      "reqId": "REQ-026",
+      "title": "Analyze 5 years of historical data",
+      "description": "As a quantitative analyst, I want to provide 5+ years of daily OHLCV data for backtesting, so that I can validate trading strategies",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-028-01",
+          "description": "Server processes 1800+ OHLCV records without timeout",
+          "testable": true
+        },
+        {
+          "id": "AC-028-02",
+          "description": "Memory usage remains under 512MB for large datasets",
+          "testable": true
+        },
+        {
+          "id": "AC-028-03",
+          "description": "Response time stays under 5 seconds for full analysis",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-029",
+      "reqId": "REQ-027",
+      "title": "Debug data validation failures",
+      "description": "As an MCP client developer, I want detailed error messages when validation fails, so that I can quickly identify and fix data issues",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-029-01",
+          "description": "Error response includes field path of invalid data",
+          "testable": true
+        },
+        {
+          "id": "AC-029-02",
+          "description": "Expected vs actual data type is shown in error",
+          "testable": true
+        },
+        {
+          "id": "AC-029-03",
+          "description": "Suggested fix is included for common errors",
+          "testable": true
+        },
+        {
+          "id": "AC-029-04",
+          "description": "Multiple validation errors are reported in single response",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-030",
+      "reqId": "REQ-028",
+      "title": "Reference data contract documentation",
+      "description": "As an MCP client developer, I want comprehensive documentation of data contracts, so that I can implement correct data structures",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-030-01",
+          "description": "Documentation includes all field names and types",
+          "testable": true
+        },
+        {
+          "id": "AC-030-02",
+          "description": "Date/time format specifications are provided",
+          "testable": true
+        },
+        {
+          "id": "AC-030-03",
+          "description": "Enum values are listed for categorical fields",
+          "testable": true
+        },
+        {
+          "id": "AC-030-04",
+          "description": "Example JSON payloads are provided for each tool",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-031",
+      "reqId": "REQ-029",
+      "title": "Prevent injection attacks via client data",
+      "description": "As a security engineer, I want client data to be sanitized before processing, so that injection attacks are prevented",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-031-01",
+          "description": "String fields are sanitized to prevent code injection",
+          "testable": true
+        },
+        {
+          "id": "AC-031-02",
+          "description": "Data size limits prevent memory exhaustion attacks",
+          "testable": true
+        },
+        {
+          "id": "AC-031-03",
+          "description": "Nested object depth is limited to prevent stack overflow",
+          "testable": true
+        },
+        {
+          "id": "AC-031-04",
+          "description": "Numeric fields are validated to prevent overflow/underflow",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-032",
+      "reqId": "REQ-030",
+      "title": "Migrate from server to client data",
+      "description": "As an existing user, I want a migration guide to switch from server-fetched to client-provided data, so that I can upgrade smoothly",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-032-01",
+          "description": "Step-by-step migration instructions are provided",
+          "testable": true
+        },
+        {
+          "id": "AC-032-02",
+          "description": "Code examples show before and after configurations",
+          "testable": true
+        },
+        {
+          "id": "AC-032-03",
+          "description": "Common migration issues and solutions are documented",
+          "testable": true
+        },
+        {
+          "id": "AC-032-04",
+          "description": "Rollback procedure is documented in case of issues",
+          "testable": true
+        }
+      ]
+    }
+  ]
+}

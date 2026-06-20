@@ -1,0 +1,544 @@
+{
+  "bsId": "BS-003",
+  "prdId": "PRD-003",
+  "version": "1.0.0",
+  "description": "Build sequence for implementing pure skills provider with analytics dashboard",
+  "sequence": [
+    {
+      "id": "FBS-031",
+      "title": "Refactor Skills with Financial Accuracy",
+      "summary": "Ensure all 14 skills follow Agent Skills spec with financial-grade accuracy, disclaimers, and risk warnings",
+      "storyScope": [
+        {
+          "usId": "US-031",
+          "acIds": ["AC-031-01", "AC-031-02", "AC-031-03", "AC-031-04"]
+        }
+      ],
+      "dependencies": [],
+      "testableOutcomes": [
+        "All skills have valid YAML frontmatter with disclaimers",
+        "Skills maintain 6 decimal place precision",
+        "Every output includes 'NOT FINANCIAL ADVICE' disclaimer",
+        "Skills return confidence scores with explanations",
+        "Calculation steps are traceable and reproducible"
+      ],
+      "domain": "Skills",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-032",
+      "title": "Implement Data Validation",
+      "summary": "Create comprehensive validation for client-provided stock data",
+      "storyScope": [
+        {
+          "usId": "US-032",
+          "acIds": ["AC-032-01", "AC-032-02", "AC-032-03", "AC-032-04"]
+        }
+      ],
+      "dependencies": ["FBS-031"],
+      "testableOutcomes": [
+        "OHLCV data validation works correctly",
+        "Fundamental data validation implemented",
+        "Clear error messages for invalid data",
+        "Optional fields handled gracefully"
+      ],
+      "domain": "Data Processing",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-033",
+      "title": "Set Up PostgreSQL Database",
+      "summary": "Design and implement database schema for storing analysis results",
+      "storyScope": [
+        {
+          "usId": "US-033",
+          "acIds": ["AC-033-01", "AC-033-02", "AC-033-03"]
+        }
+      ],
+      "dependencies": [],
+      "testableOutcomes": [
+        "Database schema created with proper tables",
+        "Indexes configured for performance",
+        "Connection pooling implemented",
+        "Database migrations set up"
+      ],
+      "domain": "Database",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-034",
+      "title": "Create Storage Service",
+      "summary": "Implement service to intercept and store analysis results",
+      "storyScope": [
+        {
+          "usId": "US-033",
+          "acIds": ["AC-033-01", "AC-033-02", "AC-033-03", "AC-033-04"]
+        }
+      ],
+      "dependencies": ["FBS-033"],
+      "testableOutcomes": [
+        "Analysis requests are captured",
+        "Results are stored with metadata",
+        "Client ID is properly recorded",
+        "Concurrent writes handled correctly"
+      ],
+      "domain": "Backend Services",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-035",
+      "title": "Build REST API",
+      "summary": "Develop REST API for accessing stored analysis data",
+      "storyScope": [
+        {
+          "usId": "US-037",
+          "acIds": ["AC-037-01", "AC-037-02", "AC-037-03", "AC-037-04"]
+        }
+      ],
+      "dependencies": ["FBS-033", "FBS-034"],
+      "testableOutcomes": [
+        "GET endpoints return correct data",
+        "Pagination works properly",
+        "Filtering parameters function",
+        "API documentation generated"
+      ],
+      "domain": "API",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-036",
+      "title": "Create Dashboard Foundation",
+      "summary": "Set up React/Next.js project with basic layout and routing",
+      "storyScope": [
+        {
+          "usId": "US-034",
+          "acIds": ["AC-034-01", "AC-034-04"]
+        }
+      ],
+      "dependencies": [],
+      "testableOutcomes": [
+        "Next.js project configured",
+        "Basic routing implemented",
+        "Component structure defined",
+        "Development environment ready"
+      ],
+      "domain": "Frontend",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-037",
+      "title": "Implement Analysis List View",
+      "summary": "Build main dashboard view showing list of analyses with pagination",
+      "storyScope": [
+        {
+          "usId": "US-034",
+          "acIds": ["AC-034-01", "AC-034-02", "AC-034-04"]
+        }
+      ],
+      "dependencies": ["FBS-035", "FBS-036"],
+      "testableOutcomes": [
+        "Analysis list displays correctly",
+        "Pagination handles large datasets",
+        "Click to view details works",
+        "Loading states implemented"
+      ],
+      "domain": "Frontend",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-038",
+      "title": "Add Search and Filters",
+      "summary": "Implement search functionality and filtering options",
+      "storyScope": [
+        {
+          "usId": "US-035",
+          "acIds": ["AC-035-01", "AC-035-02", "AC-035-03", "AC-035-04"]
+        }
+      ],
+      "dependencies": ["FBS-037"],
+      "testableOutcomes": [
+        "Search by ticker works",
+        "Date range filtering functions",
+        "Analysis type filter works",
+        "Combined filters operate correctly"
+      ],
+      "domain": "Frontend",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-039",
+      "title": "Create Trend Analytics",
+      "summary": "Build analytics components showing trends and insights",
+      "storyScope": [
+        {
+          "usId": "US-036",
+          "acIds": ["AC-036-01", "AC-036-02", "AC-036-03", "AC-036-04"]
+        }
+      ],
+      "dependencies": ["FBS-035", "FBS-037"],
+      "testableOutcomes": [
+        "Most analyzed stocks displayed",
+        "Trend charts render correctly",
+        "Success metrics calculated",
+        "Insights generated from data"
+      ],
+      "domain": "Analytics",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-040",
+      "title": "Implement Multi-Client Support",
+      "summary": "Add client identification and data isolation",
+      "storyScope": [
+        {
+          "usId": "US-038",
+          "acIds": ["AC-038-01", "AC-038-02", "AC-038-03", "AC-038-04"]
+        }
+      ],
+      "dependencies": ["FBS-034", "FBS-035"],
+      "testableOutcomes": [
+        "Client ID captured for each analysis",
+        "Dashboard filters by client",
+        "API respects client filtering",
+        "Data isolation enforced"
+      ],
+      "domain": "Security",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-041",
+      "title": "Add Export Functionality",
+      "summary": "Implement data export in multiple formats",
+      "storyScope": [
+        {
+          "usId": "US-039",
+          "acIds": ["AC-039-01", "AC-039-02", "AC-039-03", "AC-039-04"]
+        }
+      ],
+      "dependencies": ["FBS-035", "FBS-037"],
+      "testableOutcomes": [
+        "CSV export generates correctly",
+        "JSON export with proper structure",
+        "PDF includes charts and summaries",
+        "Export respects active filters"
+      ],
+      "domain": "Export",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-042",
+      "title": "Optimize Performance",
+      "summary": "Implement caching, indexing, and query optimization",
+      "storyScope": [
+        {
+          "usId": "US-040",
+          "acIds": ["AC-040-01", "AC-040-02", "AC-040-03", "AC-040-04"]
+        }
+      ],
+      "dependencies": ["FBS-033", "FBS-035", "FBS-037"],
+      "testableOutcomes": [
+        "Dashboard loads under 2 seconds",
+        "Queries return under 1 second",
+        "Charts render without lag",
+        "Large datasets handled efficiently"
+      ],
+      "domain": "Performance",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-043",
+      "title": "Implement WebSocket Updates",
+      "summary": "Add real-time updates to dashboard via WebSocket",
+      "storyScope": [
+        {
+          "usId": "US-041",
+          "acIds": ["AC-041-01", "AC-041-02", "AC-041-03", "AC-041-04"]
+        }
+      ],
+      "dependencies": ["FBS-035", "FBS-037"],
+      "testableOutcomes": [
+        "WebSocket connection established",
+        "New analyses appear live",
+        "Auto-reconnection works",
+        "Toggle functionality implemented"
+      ],
+      "domain": "Real-time",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-044",
+      "title": "Build Comparison Tool",
+      "summary": "Create interface for comparing multiple analyses",
+      "storyScope": [
+        {
+          "usId": "US-042",
+          "acIds": ["AC-042-01", "AC-042-02", "AC-042-03", "AC-042-04"]
+        }
+      ],
+      "dependencies": ["FBS-037"],
+      "testableOutcomes": [
+        "Multiple analyses selectable",
+        "Side-by-side view works",
+        "Differences highlighted",
+        "Comparison exportable"
+      ],
+      "domain": "Frontend",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-045",
+      "title": "Implement Audit Logging",
+      "summary": "Add comprehensive audit logging for compliance",
+      "storyScope": [
+        {
+          "usId": "US-043",
+          "acIds": ["AC-043-01", "AC-043-02", "AC-043-03", "AC-043-04"]
+        }
+      ],
+      "dependencies": ["FBS-034"],
+      "testableOutcomes": [
+        "All requests logged",
+        "Access logged with IDs",
+        "Logs are searchable",
+        "Retention policy works"
+      ],
+      "domain": "Compliance",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-046",
+      "title": "Add Data Retention",
+      "summary": "Implement configurable data retention policies",
+      "storyScope": [
+        {
+          "usId": "US-044",
+          "acIds": ["AC-044-01", "AC-044-02", "AC-044-03", "AC-044-04"]
+        }
+      ],
+      "dependencies": ["FBS-033"],
+      "testableOutcomes": [
+        "Retention period configurable",
+        "Archival process works",
+        "Deletion automated",
+        "Policies logged"
+      ],
+      "domain": "Data Management",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-047",
+      "title": "Dashboard Customization",
+      "summary": "Allow users to customize dashboard layout and save views",
+      "storyScope": [
+        {
+          "usId": "US-045",
+          "acIds": ["AC-045-01", "AC-045-02", "AC-045-03", "AC-045-04"]
+        }
+      ],
+      "dependencies": ["FBS-037"],
+      "testableOutcomes": [
+        "Drag and drop works",
+        "Layouts saveable",
+        "View switching works",
+        "Sharing implemented"
+      ],
+      "domain": "Frontend",
+      "status": "not-started",
+      "riskLevel": "low"
+    },
+    {
+      "id": "FBS-048",
+      "title": "Integration Testing",
+      "summary": "End-to-end testing of complete system",
+      "storyScope": [
+        {
+          "usId": "US-031",
+          "acIds": ["AC-031-01", "AC-031-02", "AC-031-03"]
+        },
+        {
+          "usId": "US-033",
+          "acIds": ["AC-033-01", "AC-033-02"]
+        }
+      ],
+      "dependencies": ["FBS-031", "FBS-034", "FBS-037", "FBS-040"],
+      "testableOutcomes": [
+        "Full flow works end-to-end",
+        "Performance meets requirements",
+        "Security controls effective",
+        "All integrations functional"
+      ],
+      "domain": "Testing",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-049",
+      "title": "Financial Calculation Engine",
+      "summary": "Implement high-precision calculation engine with full audit trail",
+      "storyScope": [],
+      "dependencies": ["FBS-031"],
+      "testableOutcomes": [
+        "Calculations maintain 6+ decimal precision",
+        "All calculation steps are logged",
+        "Rounding follows financial standards",
+        "Edge cases handled correctly",
+        "Calculation explanations generated"
+      ],
+      "domain": "Financial Accuracy",
+      "status": "not-started",
+      "riskLevel": "critical"
+    },
+    {
+      "id": "FBS-050",
+      "title": "Risk Assessment Module",
+      "summary": "Build comprehensive risk assessment and position sizing module",
+      "storyScope": [],
+      "dependencies": ["FBS-031", "FBS-049"],
+      "testableOutcomes": [
+        "Confidence intervals calculated correctly",
+        "Position size limits enforced",
+        "Kelly Criterion implemented",
+        "Stop-loss recommendations generated",
+        "Risk warnings displayed prominently"
+      ],
+      "domain": "Risk Management",
+      "status": "not-started",
+      "riskLevel": "critical"
+    },
+    {
+      "id": "FBS-051",
+      "title": "Compliance and Disclaimers",
+      "summary": "Implement mandatory disclaimers and compliance checks",
+      "storyScope": [],
+      "dependencies": ["FBS-031"],
+      "testableOutcomes": [
+        "NOT FINANCIAL ADVICE disclaimer on all outputs",
+        "Risk warnings displayed prominently",
+        "Compliance reports generated",
+        "Audit trail maintained",
+        "Regulatory requirements met"
+      ],
+      "domain": "Compliance",
+      "status": "not-started",
+      "riskLevel": "critical"
+    },
+    {
+      "id": "FBS-052",
+      "title": "Data Quality Validator",
+      "summary": "Create comprehensive data quality validation and anomaly detection",
+      "storyScope": [],
+      "dependencies": ["FBS-032"],
+      "testableOutcomes": [
+        "Outliers detected and flagged",
+        "Data freshness validated",
+        "Market hours checked",
+        "Anomalies generate warnings",
+        "Quality score calculated"
+      ],
+      "domain": "Data Quality",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-053",
+      "title": "Backtesting Framework",
+      "summary": "Implement historical backtesting with clear separation of historical vs projected",
+      "storyScope": [],
+      "dependencies": ["FBS-031", "FBS-049"],
+      "testableOutcomes": [
+        "Historical backtests run correctly",
+        "Clear labeling of historical vs projected",
+        "Survivorship bias handled",
+        "Backtest results include confidence bands",
+        "Performance metrics calculated accurately"
+      ],
+      "domain": "Analytics",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-054",
+      "title": "Model Versioning System",
+      "summary": "Implement version control for all analysis models and formulas",
+      "storyScope": [],
+      "dependencies": ["FBS-031", "FBS-033"],
+      "testableOutcomes": [
+        "All models versioned in database",
+        "Point-in-time reproduction works",
+        "Model changes tracked",
+        "Version history accessible",
+        "Rollback capability implemented"
+      ],
+      "domain": "Model Governance",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-055",
+      "title": "Stress Testing Framework",
+      "summary": "Build stress testing for extreme market conditions",
+      "storyScope": [],
+      "dependencies": ["FBS-050", "FBS-053"],
+      "testableOutcomes": [
+        "Black swan scenarios tested",
+        "Correlation breakdowns simulated",
+        "Extreme market conditions handled",
+        "Stress test results clearly presented",
+        "Model limitations documented"
+      ],
+      "domain": "Risk Analysis",
+      "status": "not-started",
+      "riskLevel": "high"
+    },
+    {
+      "id": "FBS-056",
+      "title": "Data Lineage Tracking",
+      "summary": "Implement complete data lineage from source to analysis",
+      "storyScope": [],
+      "dependencies": ["FBS-033", "FBS-052"],
+      "testableOutcomes": [
+        "Full data provenance tracked",
+        "Transformation steps logged",
+        "Source data recorded",
+        "Lineage queryable",
+        "Data flow visualizable"
+      ],
+      "domain": "Data Governance",
+      "status": "not-started",
+      "riskLevel": "medium"
+    },
+    {
+      "id": "FBS-057",
+      "title": "Financial Validation Testing",
+      "summary": "Comprehensive testing of financial calculations and risk models",
+      "storyScope": [],
+      "dependencies": ["FBS-049", "FBS-050", "FBS-051", "FBS-053"],
+      "testableOutcomes": [
+        "All financial formulas validated",
+        "Edge cases tested thoroughly",
+        "Precision requirements met",
+        "Risk calculations verified",
+        "Compliance checks pass"
+      ],
+      "domain": "Testing",
+      "status": "not-started",
+      "riskLevel": "critical"
+    }
+  ]
+}

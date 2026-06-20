@@ -1,0 +1,425 @@
+{
+  "prdId": "PRD-003",
+  "stories": [
+    {
+      "id": "US-031",
+      "reqId": "REQ-031",
+      "title": "Use pure analysis skills via MCP",
+      "description": "As an MCP client developer, I want to call pure analysis skills with my own data, so that I can get consistent analysis results regardless of data source",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-031-01",
+          "description": "All 14 skills follow Anthropic Agent Skills specification",
+          "testable": true
+        },
+        {
+          "id": "AC-031-02",
+          "description": "Skills accept client data as input parameters",
+          "testable": true
+        },
+        {
+          "id": "AC-031-03",
+          "description": "Skills return consistent results for same input",
+          "testable": true
+        },
+        {
+          "id": "AC-031-04",
+          "description": "Skills have proper YAML frontmatter with metadata",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-032",
+      "reqId": "REQ-032",
+      "title": "Provide stock data for analysis",
+      "description": "As an MCP client, I want to provide my own OHLCV and fundamental data when requesting analysis, so that I can use my preferred data sources",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-032-01",
+          "description": "Client can provide OHLCV data in standard format",
+          "testable": true
+        },
+        {
+          "id": "AC-032-02",
+          "description": "Client can provide fundamental metrics",
+          "testable": true
+        },
+        {
+          "id": "AC-032-03",
+          "description": "Data validation provides clear error messages",
+          "testable": true
+        },
+        {
+          "id": "AC-032-04",
+          "description": "Optional fields are handled gracefully",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-033",
+      "reqId": "REQ-033",
+      "title": "Store analysis results automatically",
+      "description": "As a system administrator, I want all analysis results stored automatically in the database, so that we can track analysis history",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-033-01",
+          "description": "Analysis request data is stored with timestamp",
+          "testable": true
+        },
+        {
+          "id": "AC-033-02",
+          "description": "Analysis results are stored with full details",
+          "testable": true
+        },
+        {
+          "id": "AC-033-03",
+          "description": "Client ID is recorded for each analysis",
+          "testable": true
+        },
+        {
+          "id": "AC-033-04",
+          "description": "Database handles concurrent writes correctly",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-034",
+      "reqId": "REQ-034",
+      "title": "View analysis history in dashboard",
+      "description": "As a portfolio manager, I want to view all historical analyses in a web dashboard, so that I can track analysis patterns over time",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-034-01",
+          "description": "Dashboard displays list of all analyses",
+          "testable": true
+        },
+        {
+          "id": "AC-034-02",
+          "description": "Analysis details are viewable on click",
+          "testable": true
+        },
+        {
+          "id": "AC-034-03",
+          "description": "Charts show analysis trends over time",
+          "testable": true
+        },
+        {
+          "id": "AC-034-04",
+          "description": "Dashboard loads quickly with pagination",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-035",
+      "reqId": "REQ-035",
+      "title": "Search for specific analyses",
+      "description": "As an analyst, I want to search for analyses by ticker, date, or type, so that I can quickly find relevant historical analyses",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-035-01",
+          "description": "Search by ticker symbol returns matching analyses",
+          "testable": true
+        },
+        {
+          "id": "AC-035-02",
+          "description": "Date range filtering works correctly",
+          "testable": true
+        },
+        {
+          "id": "AC-035-03",
+          "description": "Filter by analysis type (technical, fundamental, etc.)",
+          "testable": true
+        },
+        {
+          "id": "AC-035-04",
+          "description": "Combined filters work together",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-036",
+      "reqId": "REQ-036",
+      "title": "View trend analytics",
+      "description": "As a data scientist, I want to see trend analytics from accumulated analyses, so that I can identify patterns and insights",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-036-01",
+          "description": "Dashboard shows most analyzed stocks",
+          "testable": true
+        },
+        {
+          "id": "AC-036-02",
+          "description": "Trend charts display analysis frequency over time",
+          "testable": true
+        },
+        {
+          "id": "AC-036-03",
+          "description": "Success rate metrics are calculated and displayed",
+          "testable": true
+        },
+        {
+          "id": "AC-036-04",
+          "description": "Aggregate insights are generated from data",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-037",
+      "reqId": "REQ-037",
+      "title": "Access data via REST API",
+      "description": "As a developer, I want to query analysis data via REST API, so that I can integrate with other systems",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-037-01",
+          "description": "GET endpoint returns paginated analysis list",
+          "testable": true
+        },
+        {
+          "id": "AC-037-02",
+          "description": "Query parameters support filtering",
+          "testable": true
+        },
+        {
+          "id": "AC-037-03",
+          "description": "API returns proper JSON responses",
+          "testable": true
+        },
+        {
+          "id": "AC-037-04",
+          "description": "API documentation is comprehensive",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-038",
+      "reqId": "REQ-038",
+      "title": "View client-specific analyses",
+      "description": "As a multi-client user, I want to see analyses specific to my client ID, so that data remains isolated",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-038-01",
+          "description": "Client ID is captured for each analysis",
+          "testable": true
+        },
+        {
+          "id": "AC-038-02",
+          "description": "Dashboard filters by client ID",
+          "testable": true
+        },
+        {
+          "id": "AC-038-03",
+          "description": "API respects client ID filtering",
+          "testable": true
+        },
+        {
+          "id": "AC-038-04",
+          "description": "Client data isolation is enforced",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-039",
+      "reqId": "REQ-039",
+      "title": "Export analysis data",
+      "description": "As a compliance officer, I want to export analysis data in various formats, so that I can create reports and documentation",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-039-01",
+          "description": "Export to CSV format with all fields",
+          "testable": true
+        },
+        {
+          "id": "AC-039-02",
+          "description": "Export to JSON with proper structure",
+          "testable": true
+        },
+        {
+          "id": "AC-039-03",
+          "description": "PDF export includes charts and summaries",
+          "testable": true
+        },
+        {
+          "id": "AC-039-04",
+          "description": "Export respects current filters",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-040",
+      "reqId": "REQ-040",
+      "title": "Experience fast dashboard performance",
+      "description": "As a dashboard user, I want the interface to respond quickly even with millions of records, so that I can work efficiently",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-040-01",
+          "description": "Dashboard loads in under 2 seconds",
+          "testable": true
+        },
+        {
+          "id": "AC-040-02",
+          "description": "Search queries return in under 1 second",
+          "testable": true
+        },
+        {
+          "id": "AC-040-03",
+          "description": "Charts render smoothly without lag",
+          "testable": true
+        },
+        {
+          "id": "AC-040-04",
+          "description": "Pagination handles large datasets efficiently",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-041",
+      "reqId": "REQ-041",
+      "title": "See real-time analysis updates",
+      "description": "As a trading desk user, I want to see new analyses appear in real-time, so that I can monitor current activity",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-041-01",
+          "description": "WebSocket connection established on dashboard load",
+          "testable": true
+        },
+        {
+          "id": "AC-041-02",
+          "description": "New analyses appear without page refresh",
+          "testable": true
+        },
+        {
+          "id": "AC-041-03",
+          "description": "Connection automatically reconnects if dropped",
+          "testable": true
+        },
+        {
+          "id": "AC-041-04",
+          "description": "Real-time updates can be toggled on/off",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-042",
+      "reqId": "REQ-042",
+      "title": "Compare multiple analyses",
+      "description": "As an investment analyst, I want to compare multiple analyses side-by-side, so that I can identify differences and trends",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-042-01",
+          "description": "Select multiple analyses for comparison",
+          "testable": true
+        },
+        {
+          "id": "AC-042-02",
+          "description": "Side-by-side view shows all metrics",
+          "testable": true
+        },
+        {
+          "id": "AC-042-03",
+          "description": "Differences are highlighted visually",
+          "testable": true
+        },
+        {
+          "id": "AC-042-04",
+          "description": "Comparison can be exported",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-043",
+      "reqId": "REQ-043",
+      "title": "Audit analysis activities",
+      "description": "As a compliance officer, I want comprehensive audit logs of all analysis activities, so that I can track usage and ensure compliance",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-043-01",
+          "description": "All analysis requests are logged with timestamp",
+          "testable": true
+        },
+        {
+          "id": "AC-043-02",
+          "description": "Data access is logged with user/client ID",
+          "testable": true
+        },
+        {
+          "id": "AC-043-03",
+          "description": "Audit logs are searchable",
+          "testable": true
+        },
+        {
+          "id": "AC-043-04",
+          "description": "Logs are retained per compliance policy",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-044",
+      "reqId": "REQ-044",
+      "title": "Manage data retention",
+      "description": "As a system administrator, I want to configure data retention policies, so that storage costs are managed while maintaining compliance",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-044-01",
+          "description": "Configure retention period in days/months",
+          "testable": true
+        },
+        {
+          "id": "AC-044-02",
+          "description": "Automatic archival of old data",
+          "testable": true
+        },
+        {
+          "id": "AC-044-03",
+          "description": "Deletion of expired data is automated",
+          "testable": true
+        },
+        {
+          "id": "AC-044-04",
+          "description": "Retention policies are logged",
+          "testable": true
+        }
+      ]
+    },
+    {
+      "id": "US-045",
+      "reqId": "REQ-045",
+      "title": "Customize dashboard layout",
+      "description": "As a power user, I want to customize my dashboard layout and save preferred views, so that I can optimize my workflow",
+      "acceptanceCriteria": [
+        {
+          "id": "AC-045-01",
+          "description": "Drag and drop widgets to rearrange layout",
+          "testable": true
+        },
+        {
+          "id": "AC-045-02",
+          "description": "Save custom dashboard configurations",
+          "testable": true
+        },
+        {
+          "id": "AC-045-03",
+          "description": "Switch between saved views",
+          "testable": true
+        },
+        {
+          "id": "AC-045-04",
+          "description": "Share dashboard views with team",
+          "testable": true
+        }
+      ]
+    }
+  ]
+}

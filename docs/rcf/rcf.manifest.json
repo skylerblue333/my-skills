@@ -28,7 +28,59 @@
       "fbs": [],
       "ts": [],
       "tc": []
+    },
+    {
+      "id": "PRD-002",
+      "name": "Client-Provided Data Enhancement",
+      "path": "docs/rcf/prds/PRD-002.json",
+      "stories": [
+        {
+          "id": "US-PRD-002",
+          "path": "docs/rcf/user-stories/PRD-002.userstories.json"
+        }
+      ],
+      "tad": [
+        {
+          "id": "TAD-002",
+          "path": "docs/rcf/tad/TAD-002.tad.json"
+        }
+      ],
+      "bs": [
+        {
+          "id": "BS-002",
+          "path": "docs/rcf/build-sequence/BS-002.buildsequence.json"
+        }
+      ],
+      "fbs": [],
+      "ts": [],
+      "tc": []
+    },
+    {
+      "id": "PRD-003",
+      "name": "Pure Skills Provider with Analytics Dashboard",
+      "path": "docs/rcf/prds/PRD-003.json",
+      "stories": [
+        {
+          "id": "US-PRD-003",
+          "path": "docs/rcf/user-stories/PRD-003.userstories.json"
+        }
+      ],
+      "tad": [
+        {
+          "id": "TAD-003",
+          "path": "docs/rcf/tad/TAD-003.tad.json"
+        }
+      ],
+      "bs": [
+        {
+          "id": "BS-003",
+          "path": "docs/rcf/build-sequence/BS-003.buildsequence.json"
+        }
+      ],
+      "fbs": [],
+      "ts": [],
+      "tc": []
     }
   ],
-  "activePrdId": "PRD-001"
+  "activePrdId": "PRD-003"
 }

@@ -1,0 +1,180 @@
+{
+  "prdId": "PRD-002",
+  "productName": "Stock Buddy Client-Provided Data Enhancement",
+  "version": "1.0.0",
+  "status": "draft",
+  "executiveSummary": "Enhancement to Stock Buddy MCP server enabling MCP clients to provide their own market data instead of relying on server-side data fetching. This decoupled architecture allows clients to use any data source while leveraging Stock Buddy's powerful analysis capabilities.",
+  "problemStatement": "Current Stock Buddy implementation requires the MCP server to fetch data from predefined sources, limiting flexibility for clients who have access to premium data feeds, proprietary databases, or specific broker APIs. Clients need the ability to provide their own real-time or historical data while still utilizing Stock Buddy's comprehensive analysis tools.",
+  "targetUsers": [
+    "MCP client developers with custom data sources",
+    "Trading platforms integrating Stock Buddy analysis",
+    "Institutional traders with proprietary data feeds",
+    "Developers using broker-specific APIs",
+    "Quantitative analysts with custom data pipelines",
+    "Mobile app developers needing lightweight integration"
+  ],
+  "objectives": [
+    "Enable MCP clients to provide market data directly in tool calls",
+    "Maintain backward compatibility with existing data providers",
+    "Implement robust data validation for client-provided data",
+    "Create clear data contracts for each analysis tool",
+    "Provide example client implementations",
+    "Ensure security by removing server-side credential storage"
+  ],
+  "inScope": [
+    "Client data provider interface",
+    "Enhanced MCP tool schemas with data requirements",
+    "Data validation layer for client inputs",
+    "Passthrough provider implementation",
+    "Client-side data fetching examples",
+    "Migration guide for existing integrations",
+    "Performance optimization for large datasets",
+    "Error handling for malformed data"
+  ],
+  "outOfScope": [
+    "Server-side data storage",
+    "Data persistence between calls",
+    "Client authentication/authorization",
+    "Data encryption in transit (handled by MCP)",
+    "Historical data aggregation",
+    "Real-time streaming updates"
+  ],
+  "constraints": [
+    "Must maintain existing skill interfaces",
+    "Cannot break backward compatibility",
+    "Must validate all client data before processing",
+    "Performance must handle datasets up to 5 years of daily OHLCV",
+    "Error messages must be clear and actionable"
+  ],
+  "requirements": [
+    {
+      "id": "REQ-021",
+      "title": "Client Data Provider Interface",
+      "description": "Create a ClientDataProvider that accepts market data directly from MCP tool arguments, bypassing server-side data fetching while maintaining the standard DataProvider interface for compatibility",
+      "category": "functional",
+      "domain": "Data Integration",
+      "priority": "must",
+      "rationale": "Core functionality enabling client-provided data",
+      "tags": ["data", "provider", "client"]
+    },
+    {
+      "id": "REQ-022",
+      "title": "Enhanced Tool Input Schemas",
+      "description": "Update all MCP tool schemas to explicitly define required data fields (ohlcv, fundamentals, news, etc.) with detailed type information and validation rules",
+      "category": "functional",
+      "domain": "API Design",
+      "priority": "must",
+      "rationale": "Clients need clear contracts for data provision",
+      "tags": ["schema", "validation", "api"]
+    },
+    {
+      "id": "REQ-023",
+      "title": "Data Validation Layer",
+      "description": "Implement comprehensive validation for client-provided data including type checking, range validation, date consistency, and required field verification",
+      "category": "functional",
+      "domain": "Data Quality",
+      "priority": "must",
+      "rationale": "Ensures analysis quality regardless of data source",
+      "tags": ["validation", "quality", "security"]
+    },
+    {
+      "id": "REQ-024",
+      "title": "Backward Compatibility",
+      "description": "Maintain support for existing file-based and database providers while adding client data capability through provider factory pattern",
+      "category": "non-functional",
+      "domain": "Architecture",
+      "priority": "must",
+      "rationale": "Cannot break existing integrations",
+      "tags": ["compatibility", "migration"]
+    },
+    {
+      "id": "REQ-025",
+      "title": "Client Implementation Examples",
+      "description": "Provide example client code in Python, JavaScript, and TypeScript showing how to fetch data from various sources and call Stock Buddy tools",
+      "category": "functional",
+      "domain": "Documentation",
+      "priority": "should",
+      "rationale": "Accelerates client adoption",
+      "tags": ["examples", "documentation", "client"]
+    },
+    {
+      "id": "REQ-026",
+      "title": "Performance Optimization",
+      "description": "Optimize data handling to efficiently process large datasets (5+ years of daily OHLCV) without memory issues or timeouts",
+      "category": "non-functional",
+      "domain": "Performance",
+      "priority": "should",
+      "rationale": "Historical analysis requires large datasets",
+      "tags": ["performance", "optimization"]
+    },
+    {
+      "id": "REQ-027",
+      "title": "Error Handling and Messaging",
+      "description": "Implement detailed error messages for data validation failures, missing required fields, and malformed data with clear remediation guidance",
+      "category": "functional",
+      "domain": "User Experience",
+      "priority": "must",
+      "rationale": "Clients need clear feedback on data issues",
+      "tags": ["errors", "validation", "ux"]
+    },
+    {
+      "id": "REQ-028",
+      "title": "Data Contract Documentation",
+      "description": "Create comprehensive documentation of data contracts for each tool including field names, types, formats, optional/required status, and example payloads",
+      "category": "functional",
+      "domain": "Documentation",
+      "priority": "must",
+      "rationale": "Clear contracts enable successful integration",
+      "tags": ["documentation", "contracts", "api"]
+    },
+    {
+      "id": "REQ-029",
+      "title": "Security Considerations",
+      "description": "Ensure client-provided data is sanitized, prevent injection attacks, validate data sizes to prevent DoS, and remove any server-side credential storage",
+      "category": "security",
+      "domain": "Security",
+      "priority": "must",
+      "rationale": "Client data could be malicious or malformed",
+      "tags": ["security", "validation", "sanitization"]
+    },
+    {
+      "id": "REQ-030",
+      "title": "Migration Guide",
+      "description": "Provide step-by-step migration guide for existing users to transition from server-fetched to client-provided data including configuration changes and code examples",
+      "category": "functional",
+      "domain": "Documentation",
+      "priority": "should",
+      "rationale": "Smooth transition for existing users",
+      "tags": ["migration", "documentation", "upgrade"]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Client Data Provider",
+      "definition": "A data provider implementation that receives market data from MCP client tool calls rather than fetching from external sources"
+    },
+    {
+      "term": "Data Contract",
+      "definition": "Formal specification of required and optional data fields for each analysis tool"
+    },
+    {
+      "term": "Passthrough Provider",
+      "definition": "A provider that passes client-provided data directly to analysis skills without modification"
+    },
+    {
+      "term": "Tool Schema",
+      "definition": "JSON Schema definition of input parameters and data requirements for an MCP tool"
+    }
+  ],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2024-06-20",
+      "changes": [
+        "Initial PRD for client-provided data enhancement",
+        "Defined 10 requirements for implementation",
+        "Established backward compatibility constraints"
+      ]
+    }
+  ]
+}
