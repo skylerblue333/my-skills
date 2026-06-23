@@ -165,3 +165,24 @@ export const watchlistTickers = pgTable(
     addedAt: timestamp('added_at', { withTimezone: true }).notNull().defaultNow(),
   },
 );
+
+/** Immutable skill/agent analysis results (REQ-005 audit trail). */
+export const analysisSnapshots = pgTable(
+  'analysis_snapshots',
+  {
+    id: serial('id').primaryKey(),
+    tickerId: integer('ticker_id')
+      .notNull()
+      .references(() => tickers.id, { onDelete: 'cascade' }),
+    skill: text('skill').notNull().default('analyze_ticker'),
+    asOf: date('as_of').notNull(),
+    payload: jsonb('payload').notNull().$type<Record<string, unknown>>(),
+    clientId: text('client_id'),
+    modelVersion: text('model_version'),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    index('analysis_snapshots_ticker_created_idx').on(table.tickerId, table.createdAt),
+    index('analysis_snapshots_skill_idx').on(table.skill),
+  ],
+);

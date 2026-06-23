@@ -42,8 +42,12 @@
       <div class="toolbar">
         <select id="ticker-select"></select>
         <button type="button" id="load-ticker">Load</button>
+        <button type="button" id="run-analysis">Run analysis</button>
       </div>
       <div id="ticker-meta" class="meta-bar"></div>
+      <div id="analysis-summary" class="cards analysis-cards"></div>
+      <h3>Analysis detail</h3>
+      <pre id="analysis-json" class="json-block"></pre>
       <div class="chart-row">
         <div class="chart-box"><canvas id="ohlcv-chart"></canvas></div>
       </div>

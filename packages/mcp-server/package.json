@@ -5,6 +5,16 @@
   "type": "module",
   "main": "./dist/server.js",
   "types": "./dist/server.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./composites": {
+      "types": "./dist/composites.d.ts",
+      "import": "./dist/composites.js"
+    }
+  },
   "bin": {
     "stock-buddy-mcp": "./dist/server.js"
   },
@@ -16,6 +26,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@stock-buddy/core": "file:../core",
+    "@stock-buddy/db": "file:../db",
     "@stock-buddy/skills": "file:../skills",
     "express": "^4.21.2"
   },

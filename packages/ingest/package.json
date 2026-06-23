@@ -18,6 +18,7 @@
   "dependencies": {
     "@stock-buddy/core": "file:../core",
     "@stock-buddy/db": "file:../db",
+    "@stock-buddy/mcp-server": "file:../mcp-server",
     "@stock-buddy/scraper": "file:../scraper"
   },
   "devDependencies": {

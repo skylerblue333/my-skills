@@ -8,10 +8,12 @@
     "build": "tsup",
     "typecheck": "tsc --noEmit",
     "start": "node dist/server.js",
+    "predev": "sh -c 'lsof -ti :${STOCK_BUDDY_DASHBOARD_PORT:-3000} | xargs kill 2>/dev/null || true'",
     "dev": "tsx src/server.ts"
   },
   "dependencies": {
     "@stock-buddy/db": "file:../db",
+    "@stock-buddy/ingest": "file:../ingest",
     "express": "^4.21.2"
   },
   "devDependencies": {

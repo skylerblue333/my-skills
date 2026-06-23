@@ -17,7 +17,9 @@
       ],
       "env": {
         "STOCK_BUDDY_HTTP": "0",
-        "STOCK_BUDDY_SKILLS_DIR": "/Users/kuntal/Developer/stock-buddy-skill-mcp/stock-buddy/skills"
+        "STOCK_BUDDY_SKILLS_DIR": "/Users/kuntal/Developer/stock-buddy-skill-mcp/stock-buddy/skills",
+        "DATABASE_URL": "postgresql://stockbuddy:stockbuddy@localhost:5432/stockbuddy",
+        "STOCK_BUDDY_PERSIST_ANALYSIS": "1"
       }
     }
   }

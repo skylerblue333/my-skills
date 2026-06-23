@@ -18,6 +18,7 @@ import express from 'express';
 import { COMPOSITES } from './composites.js';
 import { runSkill, SkillError } from './dispatch.js';
 import { inputSchema, SKILLS } from './registry.js';
+import { maybePersistAnalysis } from './persist-analysis.js';
 
 export const DISCLAIMER = 'Educational analysis only. Not financial advice.';
 
@@ -60,6 +61,7 @@ function createServer(): Server {
   server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const name = request.params.name;
     const args = (request.params.arguments ?? {}) as Record<string, unknown>;
+    const clientId = typeof args.client_id === 'string' ? args.client_id : undefined;
 
     let result: Record<string, unknown>;
     try {
@@ -73,6 +75,20 @@ function createServer(): Server {
         error: err instanceof SkillError ? err.message : String(err),
         tool: name,
       };
+    }
+
+    if (name === 'analyze_ticker' && !('error' in result)) {
+      try {
+        const snapshotId = await maybePersistAnalysis(result, clientId);
+        if (snapshotId != null) {
+          result = { ...result, snapshot_id: snapshotId, persisted: true };
+        }
+      } catch (err) {
+        result = {
+          ...result,
+          persist_error: err instanceof Error ? err.message : String(err),
+        };
+      }
     }
 
     return {

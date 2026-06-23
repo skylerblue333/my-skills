@@ -64,6 +64,10 @@ async function main(): Promise<void> {
       case 'news':
         console.log(await ingestNews(db, ticker), 'news rows');
         break;
+      case 'analysis':
+        const { ingestAnalysis } = await import('./analysis.js');
+        console.log(await ingestAnalysis(db, ticker), 'analysis snapshot id');
+        break;
       case 'all':
         await ingestAll(db, ticker, days);
         console.log(`All jobs complete for ${ticker}`);

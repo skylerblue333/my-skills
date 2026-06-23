@@ -5,10 +5,44 @@ let ohlcvChart = null;
 let shareChart = null;
 let sectorChart = null;
 
-async function api(path) {
-  const r = await fetch(path);
+async function api(path, options) {
+  const r = await fetch(path, options);
   if (!r.ok) throw new Error(await r.text());
   return r.json();
+}
+
+function renderAnalysisSummary(analysis, snapshotMeta) {
+  const el = $('#analysis-summary');
+  if (!analysis) {
+    el.innerHTML = '<p class="muted">No saved analysis — click Run analysis or ingest with job <code>all</code>.</p>';
+    $('#analysis-json').textContent = '';
+    return;
+  }
+
+  const syn = analysis.synthesis ?? {};
+  const inv = syn.investment ?? {};
+  const mom = syn.momentum ?? {};
+  const risk = analysis.risk ?? {};
+  const meta = snapshotMeta
+    ? `Saved ${fmtDate(snapshotMeta.created_at)} · as_of ${fmtDate(snapshotMeta.as_of)} · id ${snapshotMeta.id}`
+    : '';
+
+  el.innerHTML = `
+    <div class="card"><div class="label">Investment</div><div class="value">${inv.composite_1_10 ?? '—'}/10</div><div class="muted">${inv.rating ?? '—'}</div></div>
+    <div class="card"><div class="label">Momentum</div><div class="value">${mom.composite_1_10 ?? '—'}/10</div><div class="muted">${mom.rating ?? '—'}</div></div>
+    <div class="card"><div class="label">Risk</div><div class="value">${risk.rating ?? '—'}</div><div class="muted">Stop ${fmtNum(risk.key_metrics?.stop_loss)} · Target ${fmtNum(risk.key_metrics?.target)}</div></div>
+    <div class="card"><div class="label">Snapshot</div><div class="value muted" style="font-size:0.85rem">${meta || '—'}</div></div>
+  `;
+  $('#analysis-json').textContent = JSON.stringify(analysis, null, 2);
+}
+
+async function loadTickerAnalysis(symbol) {
+  try {
+    const data = await api(`/api/tickers/${symbol}/analysis`);
+    renderAnalysisSummary(data.snapshot?.payload, data.snapshot);
+  } catch {
+    renderAnalysisSummary(null);
+  }
 }
 
 function fmtNum(n, d = 2) {
@@ -154,6 +188,8 @@ async function loadTickerDetail(symbol) {
     ['Date', 'Headline', 'Source'],
     data.news.map((n) => [fmtDate(n.publishedDate), n.headline, n.source ?? '—']),
   );
+
+  await loadTickerAnalysis(sym);
 }
 
 async function loadPortfolio() {
@@ -252,6 +288,30 @@ async function loadOps() {
 }
 
 $('#load-ticker').addEventListener('click', () => loadTickerDetail());
+
+$('#run-analysis').addEventListener('click', async () => {
+  const sym = $('#ticker-select').value;
+  const btn = $('#run-analysis');
+  btn.disabled = true;
+  btn.textContent = 'Running…';
+  try {
+    const data = await api(`/api/tickers/${sym}/analyze`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ client_id: 'dashboard' }),
+    });
+    renderAnalysisSummary(data.analysis, {
+      id: data.snapshot_id,
+      created_at: new Date().toISOString(),
+      as_of: data.analysis.as_of,
+    });
+  } catch (e) {
+    alert(`Analysis failed: ${e.message}`);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Run analysis';
+  }
+});
 
 async function init() {
   try {

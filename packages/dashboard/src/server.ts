@@ -8,8 +8,11 @@ import {
   loadEnv,
   getDefaultAccount,
   getFreshness,
+  getLatestAnalysisSnapshot,
   getLatestFundamentals,
   getLatestMacro,
+  listAnalysisSnapshots,
+  listRecentAnalyses,
   getNews,
   getOhlcv,
   getPortfolioPositions,
@@ -18,6 +21,7 @@ import {
   listTickers,
 } from '@stock-buddy/db';
 import {
+  analysisSnapshots,
   dataFreshness,
   fundamentalsSnapshots,
   ingestRuns,
@@ -29,6 +33,7 @@ import {
   tickers,
   watchlistTickers,
 } from '@stock-buddy/db';
+import { runTickerAnalysis } from '@stock-buddy/ingest';
 
 loadEnv();
 
@@ -60,6 +65,7 @@ app.get('/api/overview', asyncHandler(async (_req, res) => {
     const [posRow] = await db.select({ n: sql<number>`count(*)::int` }).from(portfolioPositions);
     const [runRow] = await db.select({ n: sql<number>`count(*)::int` }).from(ingestRuns);
     const [watchRow] = await db.select({ n: sql<number>`count(*)::int` }).from(watchlistTickers);
+    const [analysisRow] = await db.select({ n: sql<number>`count(*)::int` }).from(analysisSnapshots);
 
     const freshness = await db
       .select()
@@ -93,6 +99,7 @@ app.get('/api/overview', asyncHandler(async (_req, res) => {
         portfolio_positions: posRow?.n ?? 0,
         ingest_runs: runRow?.n ?? 0,
         watchlist: watchRow?.n ?? 0,
+        analysis_snapshots: analysisRow?.n ?? 0,
       },
       freshness,
       recentRuns,
@@ -168,6 +175,79 @@ app.get('/api/tickers/:symbol', asyncHandler(async (req, res) => {
     return;
   }
   res.json(data);
+}));
+
+app.get('/api/analysis/recent', asyncHandler(async (req, res) => {
+  const limit = req.query.limit ? Number(req.query.limit) : 30;
+  const rows = await withDb((db) => listRecentAnalyses(db, limit));
+  res.json({ analyses: rows });
+}));
+
+app.get('/api/tickers/:symbol/analysis', asyncHandler(async (req, res) => {
+  const symbol = String(req.params.symbol).toUpperCase();
+  const history = req.query.history === '1' || req.query.history === 'true';
+  const limit = req.query.limit ? Number(req.query.limit) : 20;
+
+  const data = await withDb(async (db) => {
+    const ticker = await getTickerBySymbol(db, symbol);
+    if (!ticker) return null;
+
+    if (history) {
+      const snapshots = await listAnalysisSnapshots(db, ticker.id, { limit });
+      return {
+        ticker: { symbol: ticker.symbol, name: ticker.name },
+        snapshots: snapshots.map((s) => ({
+          id: s.id,
+          skill: s.skill,
+          as_of: s.asOf,
+          created_at: s.createdAt,
+          model_version: s.modelVersion,
+          payload: s.payload,
+        })),
+      };
+    }
+
+    const latest = await getLatestAnalysisSnapshot(db, ticker.id);
+    return {
+      ticker: { symbol: ticker.symbol, name: ticker.name },
+      snapshot: latest
+        ? {
+            id: latest.id,
+            skill: latest.skill,
+            as_of: latest.asOf,
+            created_at: latest.createdAt,
+            model_version: latest.modelVersion,
+            payload: latest.payload,
+          }
+        : null,
+    };
+  });
+
+  if (!data) {
+    res.status(404).json({ error: `Ticker not found: ${symbol}` });
+    return;
+  }
+  res.json(data);
+}));
+
+app.post('/api/tickers/:symbol/analyze', asyncHandler(async (req, res) => {
+  const symbol = String(req.params.symbol).toUpperCase();
+  const clientId = typeof req.body?.client_id === 'string' ? req.body.client_id : 'dashboard';
+
+  const result = await withDb(async (db) => {
+    const ticker = await getTickerBySymbol(db, symbol);
+    if (!ticker) return null;
+    return runTickerAnalysis(db, symbol, { clientId, persist: true });
+  });
+
+  if (!result) {
+    res.status(404).json({ error: `Ticker not found: ${symbol}` });
+    return;
+  }
+  res.json({
+    snapshot_id: result.snapshotId,
+    analysis: result.analysis,
+  });
 }));
 
 app.get('/api/portfolio', asyncHandler(async (_req, res) => {
@@ -308,8 +388,21 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   res.status(500).json({ error: err.message });
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Stock Buddy Dashboard → http://localhost:${PORT}`);
+});
+
+server.on('error', (err: NodeJS.ErrnoException) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(
+      `Port ${PORT} is already in use. Stop the other process or set STOCK_BUDDY_DASHBOARD_PORT, e.g.:\n`
+      + `  kill $(lsof -t -i:${PORT}) 2>/dev/null\n`
+      + `  STOCK_BUDDY_DASHBOARD_PORT=3001 npm run dashboard`,
+    );
+    process.exit(1);
+  }
+  console.error(err);
+  process.exit(1);
 });
 
 for (const sig of ['SIGINT', 'SIGTERM'] as const) {

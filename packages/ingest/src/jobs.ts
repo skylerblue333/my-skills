@@ -217,6 +217,8 @@ export async function ingestAll(db: Db, symbol: string, days = 365): Promise<voi
   await ingestFundamentals(db, symbol);
   await ingestShareholding(db, symbol);
   await ingestNews(db, symbol);
+  const { ingestAnalysis } = await import('./analysis.js');
+  await ingestAnalysis(db, symbol);
 }
 
 export async function ingestWatchlist(db: Db, days = 365): Promise<void> {

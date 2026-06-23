@@ -1,6 +1,7 @@
 import { and, desc, eq, gte, lte, sql } from 'drizzle-orm';
 import type { Db } from './client.js';
 import {
+  analysisSnapshots,
   dataFreshness,
   fundamentalsSnapshots,
   ingestRuns,
@@ -391,4 +392,78 @@ export async function getWatchlistSymbols(db: Db): Promise<string[]> {
 
 export async function addToWatchlist(db: Db, tickerId: number) {
   await db.insert(watchlistTickers).values({ tickerId }).onConflictDoNothing();
+}
+
+export async function saveAnalysisSnapshot(
+  db: Db,
+  data: {
+    tickerId: number;
+    skill: string;
+    asOf: string;
+    payload: Record<string, unknown>;
+    clientId?: string;
+    modelVersion?: string;
+  },
+) {
+  const [row] = await db
+    .insert(analysisSnapshots)
+    .values({
+      tickerId: data.tickerId,
+      skill: data.skill,
+      asOf: data.asOf,
+      payload: data.payload,
+      clientId: data.clientId,
+      modelVersion: data.modelVersion,
+    })
+    .returning();
+  return row!;
+}
+
+export async function getLatestAnalysisSnapshot(
+  db: Db,
+  tickerId: number,
+  skill = 'analyze_ticker',
+) {
+  const rows = await db
+    .select()
+    .from(analysisSnapshots)
+    .where(and(eq(analysisSnapshots.tickerId, tickerId), eq(analysisSnapshots.skill, skill)))
+    .orderBy(desc(analysisSnapshots.createdAt))
+    .limit(1);
+  return rows[0] ?? null;
+}
+
+export async function listAnalysisSnapshots(
+  db: Db,
+  tickerId: number,
+  opts?: { skill?: string; limit?: number },
+) {
+  const conditions = [eq(analysisSnapshots.tickerId, tickerId)];
+  if (opts?.skill) conditions.push(eq(analysisSnapshots.skill, opts.skill));
+
+  return db
+    .select()
+    .from(analysisSnapshots)
+    .where(and(...conditions))
+    .orderBy(desc(analysisSnapshots.createdAt))
+    .limit(opts?.limit ?? 20);
+}
+
+export async function listRecentAnalyses(db: Db, limit = 30) {
+  return db
+    .select({
+      id: analysisSnapshots.id,
+      skill: analysisSnapshots.skill,
+      asOf: analysisSnapshots.asOf,
+      createdAt: analysisSnapshots.createdAt,
+      modelVersion: analysisSnapshots.modelVersion,
+      symbol: tickers.symbol,
+      investmentScore: sql<number | null>`(${analysisSnapshots.payload}->'synthesis'->'investment'->>'composite_1_10')::int`,
+      momentumScore: sql<number | null>`(${analysisSnapshots.payload}->'synthesis'->'momentum'->>'composite_1_10')::int`,
+      riskRating: sql<string | null>`${analysisSnapshots.payload}->'risk'->>'rating'`,
+    })
+    .from(analysisSnapshots)
+    .innerJoin(tickers, eq(analysisSnapshots.tickerId, tickers.id))
+    .orderBy(desc(analysisSnapshots.createdAt))
+    .limit(limit);
 }
