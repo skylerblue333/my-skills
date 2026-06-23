@@ -1,75 +1,94 @@
 ---
 name: fundamental-analysis
-description: Reads a DSE stock's fundamentals, flags balance-sheet risks, derives a multi-method fair-value range, and returns a fundamental score, rating, and reasoning. Use when the user asks for fundamental analysis, intrinsic/fair value, DCF or Graham valuation, balance-sheet health, red flags, "is this stock cheap/overvalued", P/E, ROE, or whether a Dhaka Stock Exchange ticker is a good long-term buy.
+description: Balance-sheet read, multi-method fair-value range (DCF/Graham/PE), and a fundamental score with red flags for a DSE stock. Use when the user asks for fundamental analysis, intrinsic/fair value, DCF or Graham valuation, balance-sheet health, red flags, "is this stock cheap/overvalued", P/E, ROE, or whether a Dhaka Stock Exchange ticker is a good long-term buy.
 license: Apache-2.0
-compatibility: Python 3.8+, standard library only. No network. No third-party packages.
+compatibility: Prompt-first Agent Skill. Usable with the script absent. Script is Python 3.8+ stdlib-only, no network.
 metadata:
   author: stock-buddy
-  version: "0.1.0"
-  prd_refs: ["PRD-002:REQ-018", "PRD-002:REQ-104", "PRD-002:REQ-105", "PRD-001:REQ-006", "PRD-001:REQ-044"]
+  version: "0.2.0"
+  prd_refs: ["PRD-001:REQ-003", "PRD-001:REQ-027"]
   mode: ["investment"]
 ---
 
 # Fundamental Analysis
 
+> **Prompt-first skill.** Follow the method with your own reasoning. `scripts/analyze.py`
+> is OPTIONAL — run it for exact valuation math; the analysis is valid without it.
+
+## Role & objective
+You are a value analyst. Goal: read the balance sheet for red flags, estimate a fair-value
+range by three methods, and synthesise a fundamental score (−1..+1), confidence and rating.
+
 ## When to use
+"Is LHB undervalued?", "what's the fair value of GP?", "fundamental view", "P/E and ROE
+read", "any balance-sheet red flags?". Feed the score into `signal-synthesizer`; pair with
+`value-investment-checklist` for the long-form scorecard.
 
-Activate when a user wants a fundamental read on a DSE stock: "is GP fundamentally
-strong?", "what's the fair value of BEXIMCO?", "run a DCF", "any balance-sheet red
-flags?", "is this overvalued?". This is the fundamental leg of the dual-mode signal —
-feed its score into `signal-synthesizer`, or pair it with `value-investment-checklist`.
+## Inputs you need
+Gather via `dse-data-acquisition` → **`fundamentals`** (object). Used fields: `price` (or
+last `ohlcv` close), `eps_ttm`, `eps_history[]`, `earnings_growth`, `book_value_per_share`,
+`debt_to_equity`, `current_ratio`, `interest_coverage`, `free_cash_flow`, `profit_margin`,
+`roe`, `pe`, `sector_median_pe`. Include what you have; flag what's missing — never invent.
 
-## What it does
+## Method (follow in order)
 
-Runs three logical stages in one pass (PRD-002 REQ-104/105/018):
+**1. Balance-sheet red flags** — raise a flag for each: `debt_to_equity` > 1.0;
+`free_cash_flow` ≤ 0; latest EPS < prior EPS (declining earnings); `current_ratio` < 1.0;
+`interest_coverage` < 2.0; `profit_margin` < 0.
 
-1. **Balance Sheet Reader** (`balance_sheet_reader`) — extracts key line items and
-   emits RED FLAGS: D/E > 1.0 (high leverage), free cash flow <= 0, declining earnings
-   (latest EPS < prior), current ratio < 1, interest coverage < 2, profit margin < 0.
-2. **Valuation Extractor** (`valuation_extractor`) — three methods with explicit
-   assumptions and a fair-value **range** (low / median / high):
-   - **DCF (Graham growth formula)** — `eps_ttm * (8.5 + 2 * g * 100)` where
-     `g = min(earnings_growth, 15%)`.
-   - **Graham number** — `sqrt(22.5 * eps_ttm * book_value_per_share)`.
-   - **PE-based** — `eps_ttm * sector_median_pe` (default 15 if unknown).
-3. **Fundamental Synthesizer** (`analyze`) — combines earnings trend (EPS slope),
-   red-flag count, valuation gap `(fair_median - price) / price`, and disclosure
-   quality into a score in [-1, +1]. Confidence drops with red flags, aggressive
-   assumptions, or thin disclosure. Rating: `strong_buy` / `buy` / `hold` / `sell`.
+**2. Fair value — three methods (use what inputs allow)**
+- Growth g = max(0, min(`earnings_growth`, 0.15)).
+- **DCF (Graham growth):** `eps_ttm × (8.5 + 2·g·100)`.
+- **Graham number:** `sqrt(22.5 × eps_ttm × book_value_per_share)`.
+- **PE-based:** `eps_ttm × sector_median_pe` (default 15 if unknown).
+- Fair value = {low, median, high} across the available method values.
 
-Output is a Thinking Card (see suite README).
+**3. Synthesise three components**
+- **Valuation gap** = (fair_median − price)/price; component = clamp(gap / 0.5).
+- **Earnings trend** = average % change of `eps_history`; component = clamp(avg / 0.15).
+- **Quality** = −0.2 per red flag (cap −0.8); if no flags, +0.10.
 
-## How to run
+## Scoring rubric
+`composite = 0.35·valuation_gap + 0.30·earnings_trend + 0.35·quality` (clamp −1..+1).
 
+Rating: gap ≥ 0.30 and 0 flags → **strong_buy**; gap ≥ 0.10 and ≤1 flag → **buy**;
+gap ≤ −0.15 or ≥3 flags → **sell**; else **hold**.
+
+**Confidence** = clamp(0.5 + 0.25·disclosure − 0.07·(#flags) − 0.1 (if growth pinned at the
+0.15 cap) − 0.15 (if no price/fair value), 0.1, 0.9), where disclosure = fraction of the 9
+core fields present. Flag `limited_disclosure` if disclosure < 0.6.
+
+Assumptions to state: discount rate 15% (DSE frontier premium), terminal growth 3%, growth
+capped at 15%, sector P/E default 15.
+
+## Output (emit this Thinking Card)
+```json
+{ "skill": "fundamental-analysis", "ticker": "..", "mode": "investment", "as_of": "..",
+  "score": 0.0, "confidence": 0.0, "rating": "..",
+  "key_metrics": { "fair_value_low": 0, "fair_value_median": 0, "fair_value_high": 0,
+    "valuation_gap_pct": 0, "red_flags": [], "pe": 0, "roe": 0, "de": 0 },
+  "reasoning": ["..."], "flags": ["..."],
+  "disclaimer": "Educational analysis only. Not financial advice." }
+```
+
+## DSE pitfalls
+- Few DSE names disclose every field — score on what's present and surface `limited_disclosure`
+  rather than guessing.
+- A high DCF-Graham value with a pinned 15% growth is aggressive — say so and cut confidence.
+- Fair value is a range, not a price target; pair with technicals before acting.
+
+## Optional precision helper
 ```bash
 python3 scripts/analyze.py --input data.json --pretty
-cat data.json | python3 scripts/analyze.py
 ```
+Returns the exact fair-value methods, gap %, red-flag list, score/confidence/rating. Use it to
+check your arithmetic; trust the script if they differ.
 
-Reads `fundamentals` (required). Price is taken from `fundamentals.price`, falling back
-to the last `ohlcv` close. Returns `score` (-1..+1), `confidence` (0..1), `rating`,
-`key_metrics` (fair_value_low/median/high, valuation_gap_pct, red_flags, pe, roe, de,
-methods, assumptions) and `reasoning`.
+## Worked example
+LHB: price 54.3, eps_ttm 4.17, bvps 17.33, roe 0.241, d/e 0, fcf>0, sector P/E 15 →
+PE-based 62.6, Graham 40.3, DCF-Graham 160.5 → median ≈ 62.6, gap +15% → component +0.30;
+no red flags → quality +0.10 → composite ≈ 0.44 → **buy**.
 
-Try it now with the shared fixture:
-
-```bash
-python3 scripts/analyze.py --input ../_fixtures/sample_input.json --pretty
-```
-
-## Interpreting output
-
-- A large positive `valuation_gap_pct` means price sits below the fair-value median
-  (potentially undervalued); a negative gap means the opposite.
-- `rating` blends the valuation gap with the red-flag count — `sell` triggers on a
-  negative gap or three-plus red flags regardless of cheapness.
-- `flags` carry confidence penalties (`limited_disclosure`, `no_eps_history`,
-  `no_price_or_fair_value`) — never silently dropped.
-
-## Notes
-
-Valuation methods, the Graham formulas, default assumptions (r = 15%, terminal
-g = 3%, sector P/E = 15), and DSE caveats are documented in
-[references/VALUATION.md](references/VALUATION.md) — including why DSE P/E benchmarks
-run higher than US comparables (PRD-001 REQ-044). Output is educational analysis only,
-never financial advice.
+## References
+Valuation formulas and assumptions: [references/VALUATION.md](references/VALUATION.md).
+Output is educational analysis only, never financial advice.
