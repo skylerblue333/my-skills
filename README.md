@@ -1,34 +1,22 @@
-# my-skills
+# 🛠️ Technical Skills & Competencies
 
-hey want to be friends. I have weChat
+A curated showcase of my technical expertise, tools, and professional certifications.
 
-## 🚀 Overview
-This repository contains a professional implementation of **my skills**. It is designed with clean code principles and focuses on functionality and reliability.
+## 💻 Languages & Frameworks
+- **Frontend**: TypeScript, React, Next.js, Tailwind CSS.
+- **Backend**: Node.js, Express, tRPC, Rust, Python, Go.
+- **Database**: MySQL, PostgreSQL, Redis, Drizzle ORM.
+- **Blockchain**: Solidity, Solana/Rust.
 
-## 🛠️ Tech Stack
-- **Primary Language**: my
-- **Environment**: Node.js / Python / Rust (as applicable)
-- **Key Features**: 
-  - Modular architecture
-  - Clean implementation of core logic
-  - Scalable design
+## 🛡️ Cybersecurity & Infrastructure
+- **Certifications**: Certified Ethical Hacker (CEH).
+- **Security**: Penetration testing, vulnerability assessment, zero-trust architecture.
+- **DevOps**: Docker, GitHub Actions, CI/CD pipelines, Linux administration.
 
-## 📂 Getting Started
-
-### Prerequisites
-- Ensure you have the latest version of the relevant runtime (Node.js, Python, or Rust) installed.
-
-### Installation
-```bash
-git clone https://github.com/skylerblue333/my-skills.git
-cd my-skills
-```
-
-### Usage
-Follow the specific language conventions to run the project (e.g., `npm install`, `cargo build`, or `pip install -r requirements.txt`).
-
-## 🛡️ License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🚀 Projects Highlights
+- **Skycoin Ecosystem**: Full-stack digital super-platform.
+- **ShadowChat**: Secure, real-time messaging core.
+- **Rust Systems**: High-performance backend utilities.
 
 ---
-Built by [Skyler Blue](https://github.com/skylerblue333)
+[LinkedIn](https://www.linkedin.com/in/skyler-spillers-7ab494419/) | [GitHub](https://github.com/skylerblue333)
