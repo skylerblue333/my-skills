@@ -7,7 +7,7 @@ metadata:
     github-path: skills/sentiment-news
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 76d6670a8127077f0155fd06361b920ccd43ceb0
     mode:
         - momentum

@@ -7,7 +7,7 @@ metadata:
     github-path: skills/risk-manager
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 16dbdae4c9187cc5a99a50cb2b1bed76de9995a9
     mode:
         - investment

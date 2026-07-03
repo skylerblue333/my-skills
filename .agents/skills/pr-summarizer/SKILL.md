@@ -7,7 +7,7 @@ metadata:
     github-path: skills/pr-summarizer
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 10de4e19f92df539881269192f939df4fcce4775
     version: 0.1.0
 name: pr-summarizer

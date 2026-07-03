@@ -7,7 +7,7 @@ metadata:
     github-path: skills/ticker-dossier
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 94d8488390c2cc574a2a86724967622055839398
     mode:
         - momentum

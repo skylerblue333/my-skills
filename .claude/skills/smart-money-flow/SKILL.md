@@ -7,7 +7,7 @@ metadata:
     github-path: skills/smart-money-flow
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 5f565c3ee36ff3a3ac8f496e50d78b39611bd383
     mode:
         - momentum

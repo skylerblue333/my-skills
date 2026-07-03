@@ -7,7 +7,7 @@ metadata:
     github-path: skills/value-investment-checklist
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 74299d605c5ec14b4b603b5163bb31cf0a13a2d0
     mode:
         - investment

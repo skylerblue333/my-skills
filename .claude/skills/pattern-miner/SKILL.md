@@ -7,7 +7,7 @@ metadata:
     github-path: skills/pattern-miner
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 96eeeb86c9ab165374269ac34604f1aaa6dd487c
     mode:
         - momentum

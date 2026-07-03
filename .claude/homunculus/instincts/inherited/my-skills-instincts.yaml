@@ -1,4 +1,4 @@
-# Instincts generated from https://github.com/kuntal-r-d/my-skills
+# Instincts generated from https://github.com/skylerblue333/my-skills
 # Generated: 2026-06-19T16:48:54.542Z
 # Version: 2.0
 # NOTE: This file supplements (does not replace) any existing curated instincts.
@@ -10,7 +10,7 @@ trigger: "when writing a commit message"
 confidence: 0.85
 domain: git
 source: repo-analysis
-source_repo: https://github.com/kuntal-r-d/my-skills
+source_repo: https://github.com/skylerblue333/my-skills
 ---
 
 # My Skills Commit Conventional
@@ -31,7 +31,7 @@ trigger: "when writing a commit message"
 confidence: 0.6
 domain: git
 source: repo-analysis
-source_repo: https://github.com/kuntal-r-d/my-skills
+source_repo: https://github.com/skylerblue333/my-skills
 ---
 
 # My Skills Commit Length
@@ -51,7 +51,7 @@ trigger: "when creating a new file"
 confidence: 0.8
 domain: code-style
 source: repo-analysis
-source_repo: https://github.com/kuntal-r-d/my-skills
+source_repo: https://github.com/skylerblue333/my-skills
 ---
 
 # My Skills Naming Files
@@ -71,7 +71,7 @@ trigger: "when importing modules"
 confidence: 0.75
 domain: code-style
 source: repo-analysis
-source_repo: https://github.com/kuntal-r-d/my-skills
+source_repo: https://github.com/skylerblue333/my-skills
 ---
 
 # My Skills Import Relative
@@ -91,7 +91,7 @@ trigger: "when exporting from a module"
 confidence: 0.7
 domain: code-style
 source: repo-analysis
-source_repo: https://github.com/kuntal-r-d/my-skills
+source_repo: https://github.com/skylerblue333/my-skills
 ---
 
 # My Skills Export Style
@@ -111,7 +111,7 @@ trigger: "when writing tests"
 confidence: 0.8
 domain: testing
 source: repo-analysis
-source_repo: https://github.com/kuntal-r-d/my-skills
+source_repo: https://github.com/skylerblue333/my-skills
 ---
 
 # My Skills Test Separate
@@ -131,7 +131,7 @@ trigger: "When creating a new file"
 confidence: 0.9
 domain: code-style
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct File Naming
@@ -150,7 +150,7 @@ trigger: "When defining a new function"
 confidence: 0.9
 domain: code-style
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct Function Naming
@@ -169,7 +169,7 @@ trigger: "When defining a new class"
 confidence: 0.9
 domain: code-style
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct Class Naming
@@ -188,7 +188,7 @@ trigger: "When declaring a constant"
 confidence: 0.9
 domain: code-style
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct Constant Naming
@@ -207,7 +207,7 @@ trigger: "When importing modules"
 confidence: 0.8
 domain: code-style
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct Import Style
@@ -226,7 +226,7 @@ trigger: "When exporting from a module"
 confidence: 0.8
 domain: code-style
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct Export Style
@@ -245,7 +245,7 @@ trigger: "When writing a git commit message"
 confidence: 0.9
 domain: git
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct Commit Format
@@ -266,7 +266,7 @@ trigger: "When adding new tests"
 confidence: 0.8
 domain: testing
 source: repo-analysis
-source_repo: kuntal-r-d/my-skills
+source_repo: skylerblue333/my-skills
 ---
 
 # My Skills Instinct Test Location

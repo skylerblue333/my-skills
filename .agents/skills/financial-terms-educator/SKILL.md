@@ -7,7 +7,7 @@ metadata:
     github-path: skills/financial-terms-educator
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 1e1ca13126bb9dd7ef993da8170402cf5a4b0251
     mode:
         - education

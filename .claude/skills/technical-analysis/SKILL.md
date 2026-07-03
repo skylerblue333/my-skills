@@ -7,7 +7,7 @@ metadata:
     github-path: skills/technical-analysis
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 67479975cbf7517441151d0da81d52a835a0d73d
     mode:
         - momentum

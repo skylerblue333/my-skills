@@ -7,7 +7,7 @@ metadata:
     github-path: skills/fundamental-analysis
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 7e866e6949a7626c009229cb2941119761fb845a
     mode:
         - investment

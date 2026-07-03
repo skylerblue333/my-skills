@@ -7,7 +7,7 @@ metadata:
     github-path: skills/macro-regime
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 5744f36e50f60472a399e3b0b0c3fa215a89297b
     mode:
         - momentum

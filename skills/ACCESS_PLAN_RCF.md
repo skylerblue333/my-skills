@@ -25,7 +25,7 @@ so that downstream distribution can begin. *(TAD: ADR-008)*
 
 ### REQ-002 — Install via `gh skill` across supported hosts
 **US-002** — As a *coding-agent user*, I want to install a skill via `gh skill install` for my host, so that it is available inside my agent. *(TAD: ADR-001)*
-- **AC-004** Given `gh` ≥ v2.90.0, when I run `gh skill install kuntal-r-d/my-skills technical-analysis --agent claude-code`, then the skill lands in the Claude Code skills directory.
+- **AC-004** Given `gh` ≥ v2.90.0, when I run `gh skill install skylerblue333/my-skills technical-analysis --agent claude-code`, then the skill lands in the Claude Code skills directory.
 - **AC-005** Given the same command with `--agent cursor` (and one more host), when it completes, then the skill is installed and listed by that host.
 - **AC-006** Given an installed skill, when I issue a prompt matching its description, then the skill triggers and runs against sample input.
 

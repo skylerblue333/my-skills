@@ -8,7 +8,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
-const jsonPath = process.argv[2] ?? join(repoRoot, 'scripts/portfolio-kuntal.json');
+const jsonPath = process.argv[2] ?? join(repoRoot, 'scripts/portfolio-skyler.json');
 
 const { loadEnv, createDb, closeDb, getDefaultAccount, ensureTicker, upsertPosition, setAccount } =
   await import('@stock-buddy/db');

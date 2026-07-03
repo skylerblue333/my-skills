@@ -6,7 +6,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/kuntal-r-d/my-skills.git
+git clone https://github.com/skylerblue333/my-skills.git
 cd my-skills
 
 # Start with Docker Compose
@@ -36,7 +36,7 @@ npx @stock-buddy/mcp-server
 
 ```bash
 # Clone and build
-git clone https://github.com/kuntal-r-d/my-skills.git
+git clone https://github.com/skylerblue333/my-skills.git
 cd my-skills
 
 npm ci
@@ -354,7 +354,7 @@ docker run -it --rm \
 
 ## 📞 Support
 
-- GitHub Issues: https://github.com/kuntal-r-d/my-skills/issues
+- GitHub Issues: https://github.com/skylerblue333/my-skills/issues
 - Documentation: `/docs/`
 - Version: 1.1.0
 

@@ -7,7 +7,7 @@ metadata:
     github-path: skills/daily-briefing
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 850204073caf1c909aebb10a9836e83c8d907f02
     mode:
         - momentum

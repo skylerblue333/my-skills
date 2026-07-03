@@ -23,7 +23,7 @@ no MCP server; no data adapter; no CI.
 
 ## Phase 0 — Land & conform (prerequisite)
 
-**Objective.** Get the suite onto `kuntal-r-d/my-skills` and passing the agentskills.io spec.
+**Objective.** Get the suite onto `skylerblue333/my-skills` and passing the agentskills.io spec.
 
 - Push `skills/` to the repo (PR via `push-skills.sh`) and merge to the default branch.
 - Run `gh skill publish` (and `--fix`) to validate every `SKILL.md` against the spec; resolve any
@@ -38,7 +38,7 @@ no MCP server; no data adapter; no CI.
 
 ## Phase 1 — Door 1: publish for `gh skill` & skill-aware hosts
 
-**Objective.** Anyone can `gh skill install kuntal-r-d/my-skills <skill> --agent <host>`.
+**Objective.** Anyone can `gh skill install skylerblue333/my-skills <skill> --agent <host>`.
 
 - Cut a semver release tag (`v1.0.0`) and push it so versions are pinnable.
 - Enable **immutable releases** + tag protection (offered by `gh skill publish`) for supply-chain
@@ -155,7 +155,7 @@ artifacts automatically.
 
 | Consumer | How they get the skills |
 |----------|-------------------------|
-| Claude Code / Copilot / Cursor / Codex / Gemini / Antigravity | `gh skill install kuntal-r-d/my-skills <skill> --agent <host>` |
+| Claude Code / Copilot / Cursor / Codex / Gemini / Antigravity | `gh skill install skylerblue333/my-skills <skill> --agent <host>` |
 | Claude Desktop & MCP-tool clients | Add `stock-buddy-mcp` server (npx/uvx/Docker) → tools appear |
 | Custom agents / LangChain-style runtimes | Call the MCP server, or shell the CLIs |
 | Backends / cron / notebooks | Direct `python3 skills/<skill>/scripts/*.py` |

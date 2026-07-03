@@ -7,7 +7,7 @@ metadata:
     github-path: skills/signal-synthesizer
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 0ffa31f0013f117beebca0ce0594b87e59889c89
     mode:
         - investment

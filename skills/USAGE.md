@@ -37,17 +37,17 @@ directory for their agent host automatically:
 
 ```sh
 # browse this repo and install interactively
-gh skill install kuntal-r-d/my-skills
+gh skill install skylerblue333/my-skills
 
 # install a specific skill for a given host
-gh skill install kuntal-r-d/my-skills technical-analysis --agent claude-code
-gh skill install kuntal-r-d/my-skills risk-manager --agent cursor
+gh skill install skylerblue333/my-skills technical-analysis --agent claude-code
+gh skill install skylerblue333/my-skills risk-manager --agent cursor
 
 # pin to a release tag or commit for reproducibility
-gh skill install kuntal-r-d/my-skills signal-synthesizer --pin v1.0.0
+gh skill install skylerblue333/my-skills signal-synthesizer --pin v1.0.0
 
 # inspect before installing (skills are executable instructions — review them)
-gh skill preview kuntal-r-d/my-skills momentum-screen
+gh skill preview skylerblue333/my-skills momentum-screen
 
 # keep installed skills current
 gh skill update --all
@@ -175,7 +175,7 @@ See [README.md](README.md#skill-index) for the full skill index, and each skill'
 
 ## 8. Publishing this repo (maintainer)
 
-To make the suite installable via `gh skill install kuntal-r-d/my-skills`, the repo owner runs:
+To make the suite installable via `gh skill install skylerblue333/my-skills`, the repo owner runs:
 
 ```sh
 gh skill publish            # validate every SKILL.md against the agentskills.io spec

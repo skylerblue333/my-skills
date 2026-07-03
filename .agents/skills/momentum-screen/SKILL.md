@@ -7,7 +7,7 @@ metadata:
     github-path: skills/momentum-screen
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 63a5a9438c9a19015d919f18cd0e2219792f856c
     mode:
         - momentum

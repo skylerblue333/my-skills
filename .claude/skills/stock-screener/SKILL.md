@@ -7,7 +7,7 @@ metadata:
     github-path: skills/stock-screener
     github-pinned: main
     github-ref: refs/heads/main
-    github-repo: https://github.com/kuntal-r-d/my-skills
+    github-repo: https://github.com/skylerblue333/my-skills
     github-tree-sha: 69bcefb2e464aea6b3a6098d7ad6e07b52df132d
     mode:
         - momentum

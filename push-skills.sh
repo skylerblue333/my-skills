@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Push the Stock Buddy skill suite to github.com/kuntal-r-d/my-skills
+# Push the Stock Buddy skill suite to github.com/skylerblue333/my-skills
 # Run this on your Mac (where your git/GitHub credentials live).
 set -euo pipefail
 
-REPO="https://github.com/kuntal-r-d/my-skills.git"
+REPO="https://github.com/skylerblue333/my-skills.git"
 SKILLS_SRC="/Users/kuntal/Developer/stock-buddy-skill-mcp/stock-buddy/skills"
 BRANCH="add-stock-buddy-skills"
 WORKDIR="$(mktemp -d)"
@@ -41,7 +41,7 @@ if command -v gh >/dev/null 2>&1; then
   gh pr create --base main --head "$BRANCH" --fill
 else
   echo "==> gh CLI not found. Open a PR here:"
-  echo "    https://github.com/kuntal-r-d/my-skills/compare/main...$BRANCH?expand=1"
+  echo "    https://github.com/skylerblue333/my-skills/compare/main...$BRANCH?expand=1"
 fi
 
 echo "==> Done. Temp clone at: $WORKDIR/my-skills"
