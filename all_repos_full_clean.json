@@ -1,0 +1,786 @@
+[
+  {
+    "description": "",
+    "isPrivate": false,
+    "name": "ShadowChat",
+    "updatedAt": "2026-07-04T05:40:35Z",
+    "url": "https://github.com/skylerblue333/ShadowChat"
+  },
+  {
+    "description": "software I've been working on",
+    "isPrivate": true,
+    "name": "skycoin4444",
+    "updatedAt": "2026-07-04T05:40:28Z",
+    "url": "https://github.com/skylerblue333/skycoin4444"
+  },
+  {
+    "description": "hey want to be friends. I have weChat",
+    "isPrivate": false,
+    "name": "my-skills",
+    "updatedAt": "2026-07-04T02:14:47Z",
+    "url": "https://github.com/skylerblue333/my-skills"
+  },
+  {
+    "description": "REST API with Express, Mongoose, and Swagger docs.",
+    "isPrivate": false,
+    "name": "TS-Express-API",
+    "updatedAt": "2026-07-03T20:38:06Z",
+    "url": "https://github.com/skylerblue333/TS-Express-API"
+  },
+  {
+    "description": "CQRS and event sourcing implementation using Node.js.",
+    "isPrivate": false,
+    "name": "Event-Sourcing-System",
+    "updatedAt": "2026-07-03T20:38:05Z",
+    "url": "https://github.com/skylerblue333/Event-Sourcing-System"
+  },
+  {
+    "description": "",
+    "isPrivate": true,
+    "name": "TypeScript-Message-Queue",
+    "updatedAt": "2026-07-03T20:38:06Z",
+    "url": "https://github.com/skylerblue333/TypeScript-Message-Queue"
+  },
+  {
+    "description": "Vue.js/Nuxt based SSR application for optimal SEO.",
+    "isPrivate": false,
+    "name": "Server-Side-Rendering",
+    "updatedAt": "2026-07-03T20:38:04Z",
+    "url": "https://github.com/skylerblue333/Server-Side-Rendering"
+  },
+  {
+    "description": "React Native app architecture targeting both iOS and Android.",
+    "isPrivate": false,
+    "name": "Cross-Platform-Mobile",
+    "updatedAt": "2026-07-03T20:38:05Z",
+    "url": "https://github.com/skylerblue333/Cross-Platform-Mobile"
+  },
+  {
+    "description": "Implementation of zero-trust security principles in Rust.",
+    "isPrivate": false,
+    "name": "Zero-Trust-Network",
+    "updatedAt": "2026-07-03T20:38:04Z",
+    "url": "https://github.com/skylerblue333/Zero-Trust-Network"
+  },
+  {
+    "description": "Apollo Server implementation with complex resolvers.",
+    "isPrivate": false,
+    "name": "TS-GraphQL-Server",
+    "updatedAt": "2026-07-03T20:38:03Z",
+    "url": "https://github.com/skylerblue333/TS-GraphQL-Server"
+  },
+  {
+    "description": "Real-time chat server using Socket.io.",
+    "isPrivate": false,
+    "name": "TS-WebSocket-Chat",
+    "updatedAt": "2026-07-03T20:38:03Z",
+    "url": "https://github.com/skylerblue333/TS-WebSocket-Chat"
+  },
+  {
+    "description": "Robust backup manager implementation in TypeScript.",
+    "isPrivate": false,
+    "name": "TypeScript-Backup-Manager",
+    "updatedAt": "2026-07-03T20:38:03Z",
+    "url": "https://github.com/skylerblue333/TypeScript-Backup-Manager"
+  },
+  {
+    "description": "Robust data warehouse sync implementation in TypeScript.",
+    "isPrivate": false,
+    "name": "TypeScript-Data-Warehouse-Sync",
+    "updatedAt": "2026-07-03T20:38:03Z",
+    "url": "https://github.com/skylerblue333/TypeScript-Data-Warehouse-Sync"
+  },
+  {
+    "description": "Robust email sender implementation in TypeScript.",
+    "isPrivate": false,
+    "name": "TypeScript-Email-Sender",
+    "updatedAt": "2026-07-03T20:38:02Z",
+    "url": "https://github.com/skylerblue333/TypeScript-Email-Sender"
+  },
+  {
+    "description": "Robust search ranker implementation in TypeScript.",
+    "isPrivate": false,
+    "name": "TypeScript-Search-Ranker",
+    "updatedAt": "2026-07-03T20:38:02Z",
+    "url": "https://github.com/skylerblue333/TypeScript-Search-Ranker"
+  },
+  {
+    "description": "Robust a b testing implementation in TypeScript.",
+    "isPrivate": false,
+    "name": "TypeScript-A-B-Testing",
+    "updatedAt": "2026-07-03T20:38:02Z",
+    "url": "https://github.com/skylerblue333/TypeScript-A-B-Testing"
+  },
+  {
+    "description": "Cypress/Playwright end-to-end testing suite.",
+    "isPrivate": false,
+    "name": "TS-E2E-Testing",
+    "updatedAt": "2026-07-03T20:38:01Z",
+    "url": "https://github.com/skylerblue333/TS-E2E-Testing"
+  },
+  {
+    "description": "SSR blog built with Next.js and Markdown support.",
+    "isPrivate": false,
+    "name": "TS-NextJS-Blog",
+    "updatedAt": "2026-07-03T20:38:01Z",
+    "url": "https://github.com/skylerblue333/TS-NextJS-Blog"
+  },
+  {
+    "description": "Stripe integration wrapper for e-commerce.",
+    "isPrivate": false,
+    "name": "TS-Payment-Gateway",
+    "updatedAt": "2026-07-03T20:38:01Z",
+    "url": "https://github.com/skylerblue333/TS-Payment-Gateway"
+  },
+  {
+    "description": "Custom Redux/Zustand-like state management library.",
+    "isPrivate": false,
+    "name": "TS-State-Manager",
+    "updatedAt": "2026-07-03T20:38:00Z",
+    "url": "https://github.com/skylerblue333/TS-State-Manager"
+  },
+  {
+    "description": "AWS Lambda compatible serverless functions.",
+    "isPrivate": false,
+    "name": "TS-Serverless-Funcs",
+    "updatedAt": "2026-07-03T20:38:00Z",
+    "url": "https://github.com/skylerblue333/TS-Serverless-Funcs"
+  },
+  {
+    "description": "Scalable admin dashboard with React, Tailwind, and Recharts.",
+    "isPrivate": false,
+    "name": "TS-React-Dashboard",
+    "updatedAt": "2026-07-03T20:38:00Z",
+    "url": "https://github.com/skylerblue333/TS-React-Dashboard"
+  },
+  {
+    "description": "Adaptive load shedding system in C for high-throughput servers.",
+    "isPrivate": false,
+    "name": "C-Load-Shedder",
+    "updatedAt": "2026-07-03T20:37:59Z",
+    "url": "https://github.com/skylerblue333/C-Load-Shedder"
+  },
+  {
+    "description": "Custom auto-scaling logic based on application metrics.",
+    "isPrivate": false,
+    "name": "Auto-Scaling-Manager",
+    "updatedAt": "2026-07-03T20:37:59Z",
+    "url": "https://github.com/skylerblue333/Auto-Scaling-Manager"
+  },
+  {
+    "description": "Multi-agent system framework for complex task solving.",
+    "isPrivate": false,
+    "name": "AI-Agent-Orchestrator",
+    "updatedAt": "2026-07-03T20:37:59Z",
+    "url": "https://github.com/skylerblue333/AI-Agent-Orchestrator"
+  },
+  {
+    "description": "MapReduce word count implementation in C for batch data processing.",
+    "isPrivate": false,
+    "name": "C-Map-Reduce-Job",
+    "updatedAt": "2026-07-03T20:37:58Z",
+    "url": "https://github.com/skylerblue333/C-Map-Reduce-Job"
+  },
+  {
+    "description": "High-throughput order processing engine in C for financial systems.",
+    "isPrivate": false,
+    "name": "C-Order-Processor",
+    "updatedAt": "2026-07-03T20:37:57Z",
+    "url": "https://github.com/skylerblue333/C-Order-Processor"
+  },
+  {
+    "description": "Secure in-memory secret store with AES-style XOR encryption in C.",
+    "isPrivate": false,
+    "name": "C-Secret-Manager",
+    "updatedAt": "2026-07-03T20:37:58Z",
+    "url": "https://github.com/skylerblue333/C-Secret-Manager"
+  },
+  {
+    "description": "Lightweight webhook dispatcher with retry logic in C.",
+    "isPrivate": false,
+    "name": "C-Webhook-Dispatcher",
+    "updatedAt": "2026-07-03T20:37:56Z",
+    "url": "https://github.com/skylerblue333/C-Webhook-Dispatcher"
+  },
+  {
+    "description": "High-performance full-text search engine in C with inverted index.",
+    "isPrivate": false,
+    "name": "C-Search-Engine",
+    "updatedAt": "2026-07-03T20:37:57Z",
+    "url": "https://github.com/skylerblue333/C-Search-Engine"
+  },
+  {
+    "description": "Reusable GitHub Actions workflows for enterprise deployment.",
+    "isPrivate": false,
+    "name": "CI-CD-Pipeline-Templates",
+    "updatedAt": "2026-07-03T20:37:56Z",
+    "url": "https://github.com/skylerblue333/CI-CD-Pipeline-Templates"
+  },
+  {
+    "description": "Lightweight HTTP client implementation using BSD sockets.",
+    "isPrivate": false,
+    "name": "CPP-HTTP-Client",
+    "updatedAt": "2026-07-03T20:37:56Z",
+    "url": "https://github.com/skylerblue333/CPP-HTTP-Client"
+  },
+  {
+    "description": "Optimized linear algebra library for 3D graphics.",
+    "isPrivate": false,
+    "name": "CPP-Math-Library",
+    "updatedAt": "2026-07-03T20:37:55Z",
+    "url": "https://github.com/skylerblue333/CPP-Math-Library"
+  },
+  {
+    "description": "Cron-style job scheduler with expression parsing in C#.",
+    "isPrivate": false,
+    "name": "CSharp-Cron-Manager",
+    "updatedAt": "2026-07-03T20:37:54Z",
+    "url": "https://github.com/skylerblue333/CSharp-Cron-Manager"
+  },
+  {
+    "description": "Real-time alerting and notification engine in C#.",
+    "isPrivate": false,
+    "name": "CSharp-Alerting-System",
+    "updatedAt": "2026-07-03T20:37:55Z",
+    "url": "https://github.com/skylerblue333/CSharp-Alerting-System"
+  },
+  {
+    "description": "Custom thread pool implementation for parallel processing.",
+    "isPrivate": false,
+    "name": "CPP-Thread-Pool",
+    "updatedAt": "2026-07-03T20:37:55Z",
+    "url": "https://github.com/skylerblue333/CPP-Thread-Pool"
+  },
+  {
+    "description": "Public Key Infrastructure implementation in C# with certificate management.",
+    "isPrivate": false,
+    "name": "CSharp-PKI-Infrastructure",
+    "updatedAt": "2026-07-03T20:37:54Z",
+    "url": "https://github.com/skylerblue333/CSharp-PKI-Infrastructure"
+  },
+  {
+    "description": "Document format conversion service in C# supporting PDF and HTML.",
+    "isPrivate": false,
+    "name": "CSharp-Document-Converter",
+    "updatedAt": "2026-07-03T20:37:54Z",
+    "url": "https://github.com/skylerblue333/CSharp-Document-Converter"
+  },
+  {
+    "description": "Scalable tax calculation engine in C# with multi-jurisdiction support.",
+    "isPrivate": false,
+    "name": "CSharp-Tax-Calculator",
+    "updatedAt": "2026-07-03T20:37:54Z",
+    "url": "https://github.com/skylerblue333/CSharp-Tax-Calculator"
+  },
+  {
+    "description": "OAuth2/OIDC identity provider implementation in C#.",
+    "isPrivate": false,
+    "name": "CSharp-Identity-Provider",
+    "updatedAt": "2026-07-03T20:37:54Z",
+    "url": "https://github.com/skylerblue333/CSharp-Identity-Provider"
+  },
+  {
+    "description": "Robust data lake ingester implementation in Elixir.",
+    "isPrivate": false,
+    "name": "Elixir-Data-Lake-Ingester",
+    "updatedAt": "2026-07-03T20:37:52Z",
+    "url": "https://github.com/skylerblue333/Elixir-Data-Lake-Ingester"
+  },
+  {
+    "description": "CLI tool for managing database schema migrations in Go.",
+    "isPrivate": false,
+    "name": "Database-Migration-Tool",
+    "updatedAt": "2026-07-03T20:37:53Z",
+    "url": "https://github.com/skylerblue333/Database-Migration-Tool"
+  },
+  {
+    "description": "OpenTelemetry integration examples across microservices.",
+    "isPrivate": false,
+    "name": "Distributed-Tracing-Setup",
+    "updatedAt": "2026-07-03T20:37:52Z",
+    "url": "https://github.com/skylerblue333/Distributed-Tracing-Setup"
+  },
+  {
+    "description": "Robust loyalty program implementation in Elixir.",
+    "isPrivate": false,
+    "name": "Elixir-Loyalty-Program",
+    "updatedAt": "2026-07-03T20:37:51Z",
+    "url": "https://github.com/skylerblue333/Elixir-Loyalty-Program"
+  },
+  {
+    "description": "Robust fraud detector implementation in Elixir.",
+    "isPrivate": false,
+    "name": "Elixir-Fraud-Detector",
+    "updatedAt": "2026-07-03T20:37:51Z",
+    "url": "https://github.com/skylerblue333/Elixir-Fraud-Detector"
+  },
+  {
+    "description": "Robust saml provider implementation in Elixir.",
+    "isPrivate": false,
+    "name": "Elixir-SAML-Provider",
+    "updatedAt": "2026-07-03T20:37:51Z",
+    "url": "https://github.com/skylerblue333/Elixir-SAML-Provider"
+  },
+  {
+    "description": "Robust report builder implementation in Elixir.",
+    "isPrivate": false,
+    "name": "Elixir-Report-Builder",
+    "updatedAt": "2026-07-03T20:37:51Z",
+    "url": "https://github.com/skylerblue333/Elixir-Report-Builder"
+  },
+  {
+    "description": "Robust service mesh implementation in Elixir.",
+    "isPrivate": false,
+    "name": "Elixir-Service-Mesh",
+    "updatedAt": "2026-07-03T20:37:50Z",
+    "url": "https://github.com/skylerblue333/Elixir-Service-Mesh"
+  },
+  {
+    "description": "Highly concurrent web crawler using goroutines and channels.",
+    "isPrivate": false,
+    "name": "Go-Concurrent-Crawler",
+    "updatedAt": "2026-07-03T20:37:51Z",
+    "url": "https://github.com/skylerblue333/Go-Concurrent-Crawler"
+  },
+  {
+    "description": "Robust graph database implementation in Go.",
+    "isPrivate": false,
+    "name": "Go-Graph-Database",
+    "updatedAt": "2026-07-03T20:37:50Z",
+    "url": "https://github.com/skylerblue333/Go-Graph-Database"
+  },
+  {
+    "description": "Microservice communicating via gRPC and Protobuf.",
+    "isPrivate": false,
+    "name": "Go-gRPC-Service",
+    "updatedAt": "2026-07-03T20:37:49Z",
+    "url": "https://github.com/skylerblue333/Go-gRPC-Service"
+  },
+  {
+    "description": "Robust price estimator implementation in Go.",
+    "isPrivate": false,
+    "name": "Go-Price-Estimator",
+    "updatedAt": "2026-07-03T20:37:48Z",
+    "url": "https://github.com/skylerblue333/Go-Price-Estimator"
+  },
+  {
+    "description": "Robust rate limiter implementation in Go.",
+    "isPrivate": false,
+    "name": "Go-Rate-Limiter",
+    "updatedAt": "2026-07-03T20:37:48Z",
+    "url": "https://github.com/skylerblue333/Go-Rate-Limiter"
+  },
+  {
+    "description": "In-memory key-value database with HTTP API.",
+    "isPrivate": false,
+    "name": "Go-Key-Value-Store",
+    "updatedAt": "2026-07-03T20:37:49Z",
+    "url": "https://github.com/skylerblue333/Go-Key-Value-Store"
+  },
+  {
+    "description": "High-performance reverse proxy and load balancer in Go.",
+    "isPrivate": false,
+    "name": "Go-Load-Balancer",
+    "updatedAt": "2026-07-03T20:37:49Z",
+    "url": "https://github.com/skylerblue333/Go-Load-Balancer"
+  },
+  {
+    "description": "Robust snapshot creator implementation in Go.",
+    "isPrivate": false,
+    "name": "Go-Snapshot-Creator",
+    "updatedAt": "2026-07-03T20:37:47Z",
+    "url": "https://github.com/skylerblue333/Go-Snapshot-Creator"
+  },
+  {
+    "description": "Robust stream processor implementation in Go.",
+    "isPrivate": false,
+    "name": "Go-Stream-Processor",
+    "updatedAt": "2026-07-03T20:37:47Z",
+    "url": "https://github.com/skylerblue333/Go-Stream-Processor"
+  },
+  {
+    "description": "Robust sms gateway implementation in Go.",
+    "isPrivate": false,
+    "name": "Go-SMS-Gateway",
+    "updatedAt": "2026-07-03T20:37:47Z",
+    "url": "https://github.com/skylerblue333/Go-SMS-Gateway"
+  },
+  {
+    "description": "Robust key vault implementation in Java.",
+    "isPrivate": false,
+    "name": "Java-Key-Vault",
+    "updatedAt": "2026-07-03T20:37:46Z",
+    "url": "https://github.com/skylerblue333/Java-Key-Vault"
+  },
+  {
+    "description": "Robust event bus implementation in Java.",
+    "isPrivate": false,
+    "name": "Java-Event-Bus",
+    "updatedAt": "2026-07-03T20:37:47Z",
+    "url": "https://github.com/skylerblue333/Java-Event-Bus"
+  },
+  {
+    "description": "Infrastructure as Code: Secure AWS VPC provisioning with Terraform.",
+    "isPrivate": false,
+    "name": "HCL-AWS-VPC",
+    "updatedAt": "2026-07-03T20:37:47Z",
+    "url": "https://github.com/skylerblue333/HCL-AWS-VPC"
+  },
+  {
+    "description": "Robust payment reconciler implementation in Java.",
+    "isPrivate": false,
+    "name": "Java-Payment-Reconciler",
+    "updatedAt": "2026-07-03T20:37:46Z",
+    "url": "https://github.com/skylerblue333/Java-Payment-Reconciler"
+  },
+  {
+    "description": "Robust metrics aggregator implementation in Java.",
+    "isPrivate": false,
+    "name": "Java-Metrics-Aggregator",
+    "updatedAt": "2026-07-03T20:37:46Z",
+    "url": "https://github.com/skylerblue333/Java-Metrics-Aggregator"
+  },
+  {
+    "description": "Robust rule engine implementation in Java.",
+    "isPrivate": false,
+    "name": "Java-Rule-Engine",
+    "updatedAt": "2026-07-03T20:37:45Z",
+    "url": "https://github.com/skylerblue333/Java-Rule-Engine"
+  },
+  {
+    "description": "Robust video transcoder implementation in Java.",
+    "isPrivate": false,
+    "name": "Java-Video-Transcoder",
+    "updatedAt": "2026-07-03T20:37:45Z",
+    "url": "https://github.com/skylerblue333/Java-Video-Transcoder"
+  },
+  {
+    "description": "Lightweight, high-performance backend API using Ktor.",
+    "isPrivate": false,
+    "name": "Kotlin-Ktor-Backend",
+    "updatedAt": "2026-07-03T20:37:44Z",
+    "url": "https://github.com/skylerblue333/Kotlin-Ktor-Backend"
+  },
+  {
+    "description": "RESTful API built with modern PHP 8 and Laravel patterns.",
+    "isPrivate": false,
+    "name": "PHP-Laravel-API",
+    "updatedAt": "2026-07-03T20:37:44Z",
+    "url": "https://github.com/skylerblue333/PHP-Laravel-API"
+  },
+  {
+    "description": "Script to fetch and index blockchain data.",
+    "isPrivate": false,
+    "name": "Py-Blockchain-Indexer",
+    "updatedAt": "2026-07-03T20:37:44Z",
+    "url": "https://github.com/skylerblue333/Py-Blockchain-Indexer"
+  },
+  {
+    "description": "Command-line interface for system administration.",
+    "isPrivate": false,
+    "name": "Py-CLI-Tool",
+    "updatedAt": "2026-07-03T20:37:43Z",
+    "url": "https://github.com/skylerblue333/Py-CLI-Tool"
+  },
+  {
+    "description": "Background task processor simulator.",
+    "isPrivate": false,
+    "name": "Py-Async-Worker",
+    "updatedAt": "2026-07-03T20:37:44Z",
+    "url": "https://github.com/skylerblue333/Py-Async-Worker"
+  },
+  {
+    "description": "Script to parse and analyze server logs.",
+    "isPrivate": false,
+    "name": "Py-Log-Analyzer",
+    "updatedAt": "2026-07-03T20:37:42Z",
+    "url": "https://github.com/skylerblue333/Py-Log-Analyzer"
+  },
+  {
+    "description": "ETL pipeline using Pandas for data processing.",
+    "isPrivate": false,
+    "name": "Py-Data-Pipeline",
+    "updatedAt": "2026-07-03T20:37:43Z",
+    "url": "https://github.com/skylerblue333/Py-Data-Pipeline"
+  },
+  {
+    "description": "FastAPI-based API gateway with rate limiting and JWT auth.",
+    "isPrivate": false,
+    "name": "Py-Microservice-Gateway",
+    "updatedAt": "2026-07-03T20:37:42Z",
+    "url": "https://github.com/skylerblue333/Py-Microservice-Gateway"
+  },
+  {
+    "description": "Basic vulnerability scanner for web applications.",
+    "isPrivate": false,
+    "name": "Py-Security-Scanner",
+    "updatedAt": "2026-07-03T20:37:42Z",
+    "url": "https://github.com/skylerblue333/Py-Security-Scanner"
+  },
+  {
+    "description": "Algorithmic trading simulator.",
+    "isPrivate": false,
+    "name": "Py-Trading-Bot",
+    "updatedAt": "2026-07-03T20:37:41Z",
+    "url": "https://github.com/skylerblue333/Py-Trading-Bot"
+  },
+  {
+    "description": "Flask service for serving pre-trained models.",
+    "isPrivate": false,
+    "name": "Py-ML-Inference-Server",
+    "updatedAt": "2026-07-03T20:37:42Z",
+    "url": "https://github.com/skylerblue333/Py-ML-Inference-Server"
+  },
+  {
+    "description": "Robust data exporter implementation in Python.",
+    "isPrivate": false,
+    "name": "Python-Data-Exporter",
+    "updatedAt": "2026-07-03T20:37:41Z",
+    "url": "https://github.com/skylerblue333/Python-Data-Exporter"
+  },
+  {
+    "description": "Robust distributed cache implementation in Python.",
+    "isPrivate": false,
+    "name": "Python-Distributed-Cache",
+    "updatedAt": "2026-07-03T20:37:40Z",
+    "url": "https://github.com/skylerblue333/Python-Distributed-Cache"
+  },
+  {
+    "description": "Advanced web scraper with robust error handling.",
+    "isPrivate": false,
+    "name": "Py-Web-Scraper",
+    "updatedAt": "2026-07-03T20:37:41Z",
+    "url": "https://github.com/skylerblue333/Py-Web-Scraper"
+  },
+  {
+    "description": "Robust etl pipeline implementation in Python.",
+    "isPrivate": false,
+    "name": "Python-ETL-Pipeline",
+    "updatedAt": "2026-07-03T20:37:40Z",
+    "url": "https://github.com/skylerblue333/Python-ETL-Pipeline"
+  },
+  {
+    "description": "Robust notification router implementation in Python.",
+    "isPrivate": false,
+    "name": "Python-Notification-Router",
+    "updatedAt": "2026-07-03T20:37:40Z",
+    "url": "https://github.com/skylerblue333/Python-Notification-Router"
+  },
+  {
+    "description": "Robust feature flag service implementation in Python.",
+    "isPrivate": false,
+    "name": "Python-Feature-Flag-Service",
+    "updatedAt": "2026-07-03T20:37:40Z",
+    "url": "https://github.com/skylerblue333/Python-Feature-Flag-Service"
+  },
+  {
+    "description": "Robust certificate authority implementation in Ruby.",
+    "isPrivate": false,
+    "name": "Ruby-Certificate-Authority",
+    "updatedAt": "2026-07-03T20:37:39Z",
+    "url": "https://github.com/skylerblue333/Ruby-Certificate-Authority"
+  },
+  {
+    "description": "Robust image optimizer implementation in Ruby.",
+    "isPrivate": false,
+    "name": "Ruby-Image-Optimizer",
+    "updatedAt": "2026-07-03T20:37:38Z",
+    "url": "https://github.com/skylerblue333/Ruby-Image-Optimizer"
+  },
+  {
+    "description": "Robust recommendation engine implementation in Python.",
+    "isPrivate": false,
+    "name": "Python-Recommendation-Engine",
+    "updatedAt": "2026-07-03T20:37:39Z",
+    "url": "https://github.com/skylerblue333/Python-Recommendation-Engine"
+  },
+  {
+    "description": "Robust job scheduler implementation in Ruby.",
+    "isPrivate": false,
+    "name": "Ruby-Job-Scheduler",
+    "updatedAt": "2026-07-03T20:37:38Z",
+    "url": "https://github.com/skylerblue333/Ruby-Job-Scheduler"
+  },
+  {
+    "description": "Robust ledger system implementation in Ruby.",
+    "isPrivate": false,
+    "name": "Ruby-Ledger-System",
+    "updatedAt": "2026-07-03T20:37:37Z",
+    "url": "https://github.com/skylerblue333/Ruby-Ledger-System"
+  },
+  {
+    "description": "Robust log shipper implementation in Ruby.",
+    "isPrivate": false,
+    "name": "Ruby-Log-Shipper",
+    "updatedAt": "2026-07-03T20:37:37Z",
+    "url": "https://github.com/skylerblue333/Ruby-Log-Shipper"
+  },
+  {
+    "description": "Robust workflow engine implementation in Ruby.",
+    "isPrivate": false,
+    "name": "Ruby-Workflow-Engine",
+    "updatedAt": "2026-07-03T20:37:37Z",
+    "url": "https://github.com/skylerblue333/Ruby-Workflow-Engine"
+  },
+  {
+    "description": "Robust batch processor implementation in Rust.",
+    "isPrivate": false,
+    "name": "Rust-Batch-Processor",
+    "updatedAt": "2026-07-03T20:37:37Z",
+    "url": "https://github.com/skylerblue333/Rust-Batch-Processor"
+  },
+  {
+    "description": "Robust disaster recovery implementation in Rust.",
+    "isPrivate": false,
+    "name": "Rust-Disaster-Recovery",
+    "updatedAt": "2026-07-03T20:37:36Z",
+    "url": "https://github.com/skylerblue333/Rust-Disaster-Recovery"
+  },
+  {
+    "description": "Robust inventory manager implementation in Rust.",
+    "isPrivate": false,
+    "name": "Rust-Inventory-Manager",
+    "updatedAt": "2026-07-03T20:37:35Z",
+    "url": "https://github.com/skylerblue333/Rust-Inventory-Manager"
+  },
+  {
+    "description": "Robust circuit breaker implementation in Rust.",
+    "isPrivate": false,
+    "name": "Rust-Circuit-Breaker",
+    "updatedAt": "2026-07-03T20:37:36Z",
+    "url": "https://github.com/skylerblue333/Rust-Circuit-Breaker"
+  },
+  {
+    "description": "Command-line task manager with persistent JSON storage.",
+    "isPrivate": false,
+    "name": "Rust-CLI-Task-Manager",
+    "updatedAt": "2026-07-03T20:37:36Z",
+    "url": "https://github.com/skylerblue333/Rust-CLI-Task-Manager"
+  },
+  {
+    "description": "CLI tool for fast file encryption/decryption using AES.",
+    "isPrivate": false,
+    "name": "Rust-File-Encryptor",
+    "updatedAt": "2026-07-03T20:37:36Z",
+    "url": "https://github.com/skylerblue333/Rust-File-Encryptor"
+  },
+  {
+    "description": "Robust push notifier implementation in Rust.",
+    "isPrivate": false,
+    "name": "Rust-Push-Notifier",
+    "updatedAt": "2026-07-03T20:37:34Z",
+    "url": "https://github.com/skylerblue333/Rust-Push-Notifier"
+  },
+  {
+    "description": "Robust anomaly detector implementation in Scala.",
+    "isPrivate": false,
+    "name": "Scala-Anomaly-Detector",
+    "updatedAt": "2026-07-03T20:37:34Z",
+    "url": "https://github.com/skylerblue333/Scala-Anomaly-Detector"
+  },
+  {
+    "description": "Robust pdf generator implementation in Scala.",
+    "isPrivate": false,
+    "name": "Scala-PDF-Generator",
+    "updatedAt": "2026-07-03T20:37:34Z",
+    "url": "https://github.com/skylerblue333/Scala-PDF-Generator"
+  },
+  {
+    "description": "Robust api gateway implementation in Scala.",
+    "isPrivate": false,
+    "name": "Scala-API-Gateway",
+    "updatedAt": "2026-07-03T20:37:34Z",
+    "url": "https://github.com/skylerblue333/Scala-API-Gateway"
+  },
+  {
+    "description": "Robust time series db implementation in Rust.",
+    "isPrivate": false,
+    "name": "Rust-Time-Series-DB",
+    "updatedAt": "2026-07-03T20:37:34Z",
+    "url": "https://github.com/skylerblue333/Rust-Time-Series-DB"
+  },
+  {
+    "description": "Robust oauth server implementation in Scala.",
+    "isPrivate": false,
+    "name": "Scala-OAuth-Server",
+    "updatedAt": "2026-07-03T20:37:33Z",
+    "url": "https://github.com/skylerblue333/Scala-OAuth-Server"
+  },
+  {
+    "description": "Robust task queue implementation in Scala.",
+    "isPrivate": false,
+    "name": "Scala-Task-Queue",
+    "updatedAt": "2026-07-03T20:37:32Z",
+    "url": "https://github.com/skylerblue333/Scala-Task-Queue"
+  },
+  {
+    "description": "Robust shipping estimator implementation in Scala.",
+    "isPrivate": false,
+    "name": "Scala-Shipping-Estimator",
+    "updatedAt": "2026-07-03T20:37:32Z",
+    "url": "https://github.com/skylerblue333/Scala-Shipping-Estimator"
+  },
+  {
+    "description": "Standard ERC20 token with minting and burning capabilities.",
+    "isPrivate": false,
+    "name": "Sol-ERC20-Token",
+    "updatedAt": "2026-07-03T20:37:32Z",
+    "url": "https://github.com/skylerblue333/Sol-ERC20-Token"
+  },
+  {
+    "description": "Smart contracts for buying/selling ERC721 tokens securely.",
+    "isPrivate": false,
+    "name": "Sol-NFT-Marketplace",
+    "updatedAt": "2026-07-03T20:37:32Z",
+    "url": "https://github.com/skylerblue333/Sol-NFT-Marketplace"
+  },
+  {
+    "description": "SKYCOIN4444 Ultimate Ecosystem - 100 Feature AI-Powered Digital Super Platform",
+    "isPrivate": false,
+    "name": "SKYCOIN4444-Ecosystem",
+    "updatedAt": "2026-07-03T20:37:30Z",
+    "url": "https://github.com/skylerblue333/SKYCOIN4444-Ecosystem"
+  },
+  {
+    "description": "Comprehensive design documents for enterprise systems.",
+    "isPrivate": false,
+    "name": "System-Architecture-Docs",
+    "updatedAt": "2026-07-03T20:37:30Z",
+    "url": "https://github.com/skylerblue333/System-Architecture-Docs"
+  },
+  {
+    "description": "Modern iOS application architecture using SwiftUI and Combine.",
+    "isPrivate": false,
+    "name": "Swift-iOS-App",
+    "updatedAt": "2026-07-03T20:37:31Z",
+    "url": "https://github.com/skylerblue333/Swift-iOS-App"
+  },
+  {
+    "description": "OAuth2 and JWT authentication microservice.",
+    "isPrivate": false,
+    "name": "TS-Auth-Service",
+    "updatedAt": "2026-07-03T20:37:31Z",
+    "url": "https://github.com/skylerblue333/TS-Auth-Service"
+  },
+  {
+    "description": "Software I have been working on",
+    "isPrivate": false,
+    "name": "finishedforgoogle",
+    "updatedAt": "2026-07-03T20:37:29Z",
+    "url": "https://github.com/skylerblue333/finishedforgoogle"
+  },
+  {
+    "description": "software I'm working on",
+    "isPrivate": false,
+    "name": "skycoin444-shadow-chat-hope-Ai-production-",
+    "updatedAt": "2026-07-03T20:37:29Z",
+    "url": "https://github.com/skylerblue333/skycoin444-shadow-chat-hope-Ai-production-"
+  },
+  {
+    "description": "My personal GitHub profile README.",
+    "isPrivate": false,
+    "name": "skylerblue333",
+    "updatedAt": "2026-07-03T20:37:10Z",
+    "url": "https://github.com/skylerblue333/skylerblue333"
+  }
+]

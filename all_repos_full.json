@@ -1,0 +1,786 @@
+[1;37m[[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m""[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"ShadowChat"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-04T05:40:35Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/ShadowChat"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"software I've been working on"[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mtrue[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"skycoin4444"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-04T05:40:28Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/skycoin4444"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"hey want to be friends. I have weChat"[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"my-skills"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-04T02:14:47Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/my-skills"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"REST API with Express, Mongoose, and Swagger docs."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-Express-API"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:06Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-Express-API"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"CQRS and event sourcing implementation using Node.js."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Event-Sourcing-System"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:05Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Event-Sourcing-System"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m""[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mtrue[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TypeScript-Message-Queue"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:06Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TypeScript-Message-Queue"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Vue.js/Nuxt based SSR application for optimal SEO."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Server-Side-Rendering"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:04Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Server-Side-Rendering"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"React Native app architecture targeting both iOS and Android."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Cross-Platform-Mobile"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:05Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Cross-Platform-Mobile"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Implementation of zero-trust security principles in Rust."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Zero-Trust-Network"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:04Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Zero-Trust-Network"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Apollo Server implementation with complex resolvers."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-GraphQL-Server"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:03Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-GraphQL-Server"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Real-time chat server using Socket.io."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-WebSocket-Chat"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:03Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-WebSocket-Chat"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust backup manager implementation in TypeScript."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TypeScript-Backup-Manager"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:03Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TypeScript-Backup-Manager"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust data warehouse sync implementation in TypeScript."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TypeScript-Data-Warehouse-Sync"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:03Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TypeScript-Data-Warehouse-Sync"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust email sender implementation in TypeScript."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TypeScript-Email-Sender"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:02Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TypeScript-Email-Sender"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust search ranker implementation in TypeScript."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TypeScript-Search-Ranker"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:02Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TypeScript-Search-Ranker"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust a b testing implementation in TypeScript."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TypeScript-A-B-Testing"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:02Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TypeScript-A-B-Testing"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Cypress/Playwright end-to-end testing suite."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-E2E-Testing"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:01Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-E2E-Testing"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"SSR blog built with Next.js and Markdown support."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-NextJS-Blog"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:01Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-NextJS-Blog"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Stripe integration wrapper for e-commerce."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-Payment-Gateway"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:01Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-Payment-Gateway"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Custom Redux/Zustand-like state management library."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-State-Manager"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:00Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-State-Manager"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"AWS Lambda compatible serverless functions."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-Serverless-Funcs"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:00Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-Serverless-Funcs"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Scalable admin dashboard with React, Tailwind, and Recharts."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-React-Dashboard"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:38:00Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-React-Dashboard"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Adaptive load shedding system in C for high-throughput servers."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"C-Load-Shedder"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:59Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/C-Load-Shedder"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Custom auto-scaling logic based on application metrics."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Auto-Scaling-Manager"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:59Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Auto-Scaling-Manager"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Multi-agent system framework for complex task solving."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"AI-Agent-Orchestrator"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:59Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/AI-Agent-Orchestrator"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"MapReduce word count implementation in C for batch data processing."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"C-Map-Reduce-Job"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:58Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/C-Map-Reduce-Job"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"High-throughput order processing engine in C for financial systems."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"C-Order-Processor"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:57Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/C-Order-Processor"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Secure in-memory secret store with AES-style XOR encryption in C."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"C-Secret-Manager"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:58Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/C-Secret-Manager"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Lightweight webhook dispatcher with retry logic in C."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"C-Webhook-Dispatcher"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:56Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/C-Webhook-Dispatcher"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"High-performance full-text search engine in C with inverted index."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"C-Search-Engine"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:57Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/C-Search-Engine"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Reusable GitHub Actions workflows for enterprise deployment."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CI-CD-Pipeline-Templates"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:56Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CI-CD-Pipeline-Templates"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Lightweight HTTP client implementation using BSD sockets."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CPP-HTTP-Client"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:56Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CPP-HTTP-Client"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Optimized linear algebra library for 3D graphics."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CPP-Math-Library"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:55Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CPP-Math-Library"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Cron-style job scheduler with expression parsing in C#."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CSharp-Cron-Manager"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:54Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CSharp-Cron-Manager"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Real-time alerting and notification engine in C#."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CSharp-Alerting-System"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:55Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CSharp-Alerting-System"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Custom thread pool implementation for parallel processing."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CPP-Thread-Pool"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:55Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CPP-Thread-Pool"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Public Key Infrastructure implementation in C# with certificate management."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CSharp-PKI-Infrastructure"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:54Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CSharp-PKI-Infrastructure"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Document format conversion service in C# supporting PDF and HTML."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CSharp-Document-Converter"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:54Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CSharp-Document-Converter"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Scalable tax calculation engine in C# with multi-jurisdiction support."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CSharp-Tax-Calculator"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:54Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CSharp-Tax-Calculator"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"OAuth2/OIDC identity provider implementation in C#."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"CSharp-Identity-Provider"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:54Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/CSharp-Identity-Provider"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust data lake ingester implementation in Elixir."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Elixir-Data-Lake-Ingester"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:52Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Elixir-Data-Lake-Ingester"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"CLI tool for managing database schema migrations in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Database-Migration-Tool"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:53Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Database-Migration-Tool"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"OpenTelemetry integration examples across microservices."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Distributed-Tracing-Setup"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:52Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Distributed-Tracing-Setup"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust loyalty program implementation in Elixir."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Elixir-Loyalty-Program"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:51Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Elixir-Loyalty-Program"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust fraud detector implementation in Elixir."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Elixir-Fraud-Detector"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:51Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Elixir-Fraud-Detector"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust saml provider implementation in Elixir."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Elixir-SAML-Provider"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:51Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Elixir-SAML-Provider"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust report builder implementation in Elixir."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Elixir-Report-Builder"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:51Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Elixir-Report-Builder"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust service mesh implementation in Elixir."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Elixir-Service-Mesh"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:50Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Elixir-Service-Mesh"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Highly concurrent web crawler using goroutines and channels."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Concurrent-Crawler"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:51Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Concurrent-Crawler"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust graph database implementation in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Graph-Database"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:50Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Graph-Database"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Microservice communicating via gRPC and Protobuf."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-gRPC-Service"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:49Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-gRPC-Service"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust price estimator implementation in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Price-Estimator"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:48Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Price-Estimator"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust rate limiter implementation in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Rate-Limiter"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:48Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Rate-Limiter"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"In-memory key-value database with HTTP API."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Key-Value-Store"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:49Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Key-Value-Store"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"High-performance reverse proxy and load balancer in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Load-Balancer"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:49Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Load-Balancer"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust snapshot creator implementation in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Snapshot-Creator"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:47Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Snapshot-Creator"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust stream processor implementation in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-Stream-Processor"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:47Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-Stream-Processor"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust sms gateway implementation in Go."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Go-SMS-Gateway"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:47Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Go-SMS-Gateway"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust key vault implementation in Java."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Java-Key-Vault"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:46Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Java-Key-Vault"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust event bus implementation in Java."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Java-Event-Bus"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:47Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Java-Event-Bus"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Infrastructure as Code: Secure AWS VPC provisioning with Terraform."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"HCL-AWS-VPC"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:47Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/HCL-AWS-VPC"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust payment reconciler implementation in Java."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Java-Payment-Reconciler"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:46Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Java-Payment-Reconciler"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust metrics aggregator implementation in Java."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Java-Metrics-Aggregator"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:46Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Java-Metrics-Aggregator"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust rule engine implementation in Java."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Java-Rule-Engine"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:45Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Java-Rule-Engine"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust video transcoder implementation in Java."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Java-Video-Transcoder"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:45Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Java-Video-Transcoder"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Lightweight, high-performance backend API using Ktor."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Kotlin-Ktor-Backend"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:44Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Kotlin-Ktor-Backend"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"RESTful API built with modern PHP 8 and Laravel patterns."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"PHP-Laravel-API"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:44Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/PHP-Laravel-API"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Script to fetch and index blockchain data."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Blockchain-Indexer"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:44Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Blockchain-Indexer"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Command-line interface for system administration."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-CLI-Tool"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:43Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-CLI-Tool"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Background task processor simulator."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Async-Worker"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:44Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Async-Worker"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Script to parse and analyze server logs."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Log-Analyzer"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:42Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Log-Analyzer"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"ETL pipeline using Pandas for data processing."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Data-Pipeline"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:43Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Data-Pipeline"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"FastAPI-based API gateway with rate limiting and JWT auth."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Microservice-Gateway"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:42Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Microservice-Gateway"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Basic vulnerability scanner for web applications."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Security-Scanner"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:42Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Security-Scanner"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Algorithmic trading simulator."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Trading-Bot"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:41Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Trading-Bot"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Flask service for serving pre-trained models."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-ML-Inference-Server"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:42Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-ML-Inference-Server"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust data exporter implementation in Python."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Python-Data-Exporter"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:41Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Python-Data-Exporter"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust distributed cache implementation in Python."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Python-Distributed-Cache"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:40Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Python-Distributed-Cache"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Advanced web scraper with robust error handling."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Py-Web-Scraper"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:41Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Py-Web-Scraper"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust etl pipeline implementation in Python."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Python-ETL-Pipeline"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:40Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Python-ETL-Pipeline"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust notification router implementation in Python."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Python-Notification-Router"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:40Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Python-Notification-Router"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust feature flag service implementation in Python."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Python-Feature-Flag-Service"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:40Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Python-Feature-Flag-Service"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust certificate authority implementation in Ruby."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Ruby-Certificate-Authority"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:39Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Ruby-Certificate-Authority"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust image optimizer implementation in Ruby."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Ruby-Image-Optimizer"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:38Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Ruby-Image-Optimizer"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust recommendation engine implementation in Python."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Python-Recommendation-Engine"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:39Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Python-Recommendation-Engine"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust job scheduler implementation in Ruby."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Ruby-Job-Scheduler"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:38Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Ruby-Job-Scheduler"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust ledger system implementation in Ruby."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Ruby-Ledger-System"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:37Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Ruby-Ledger-System"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust log shipper implementation in Ruby."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Ruby-Log-Shipper"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:37Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Ruby-Log-Shipper"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust workflow engine implementation in Ruby."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Ruby-Workflow-Engine"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:37Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Ruby-Workflow-Engine"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust batch processor implementation in Rust."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-Batch-Processor"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:37Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-Batch-Processor"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust disaster recovery implementation in Rust."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-Disaster-Recovery"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:36Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-Disaster-Recovery"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust inventory manager implementation in Rust."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-Inventory-Manager"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:35Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-Inventory-Manager"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust circuit breaker implementation in Rust."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-Circuit-Breaker"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:36Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-Circuit-Breaker"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Command-line task manager with persistent JSON storage."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-CLI-Task-Manager"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:36Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-CLI-Task-Manager"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"CLI tool for fast file encryption/decryption using AES."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-File-Encryptor"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:36Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-File-Encryptor"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust push notifier implementation in Rust."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-Push-Notifier"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:34Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-Push-Notifier"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust anomaly detector implementation in Scala."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Scala-Anomaly-Detector"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:34Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Scala-Anomaly-Detector"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust pdf generator implementation in Scala."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Scala-PDF-Generator"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:34Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Scala-PDF-Generator"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust api gateway implementation in Scala."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Scala-API-Gateway"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:34Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Scala-API-Gateway"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust time series db implementation in Rust."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Rust-Time-Series-DB"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:34Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Rust-Time-Series-DB"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust oauth server implementation in Scala."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Scala-OAuth-Server"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:33Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Scala-OAuth-Server"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust task queue implementation in Scala."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Scala-Task-Queue"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:32Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Scala-Task-Queue"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Robust shipping estimator implementation in Scala."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Scala-Shipping-Estimator"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:32Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Scala-Shipping-Estimator"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Standard ERC20 token with minting and burning capabilities."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Sol-ERC20-Token"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:32Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Sol-ERC20-Token"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Smart contracts for buying/selling ERC721 tokens securely."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Sol-NFT-Marketplace"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:32Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Sol-NFT-Marketplace"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"SKYCOIN4444 Ultimate Ecosystem - 100 Feature AI-Powered Digital Super Platform"[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"SKYCOIN4444-Ecosystem"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:30Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/SKYCOIN4444-Ecosystem"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Comprehensive design documents for enterprise systems."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"System-Architecture-Docs"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:30Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/System-Architecture-Docs"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Modern iOS application architecture using SwiftUI and Combine."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"Swift-iOS-App"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:31Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/Swift-iOS-App"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"OAuth2 and JWT authentication microservice."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"TS-Auth-Service"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:31Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/TS-Auth-Service"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"Software I have been working on"[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"finishedforgoogle"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:29Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/finishedforgoogle"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"software I'm working on"[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"skycoin444-shadow-chat-hope-Ai-production-"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:29Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/skycoin444-shadow-chat-hope-Ai-production-"[m
+  [1;37m}[m[1;37m,[m
+  [1;37m{[m
+    [1;34m"description"[m[1;37m:[m [32m"My personal GitHub profile README."[m[1;37m,[m
+    [1;34m"isPrivate"[m[1;37m:[m [33mfalse[m[1;37m,[m
+    [1;34m"name"[m[1;37m:[m [32m"skylerblue333"[m[1;37m,[m
+    [1;34m"updatedAt"[m[1;37m:[m [32m"2026-07-03T20:37:10Z"[m[1;37m,[m
+    [1;34m"url"[m[1;37m:[m [32m"https://github.com/skylerblue333/skylerblue333"[m
+  [1;37m}[m
+[1;37m][m
